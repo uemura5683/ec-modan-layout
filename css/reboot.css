@@ -2199,7 +2199,7 @@ button:hover {
 }
 
 .o-more.remove img {
-  transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 
@@ -2308,8 +2308,9 @@ button:hover {
   -webkit-box-shadow: 0px 0px 8px 0px #fafafa;
   box-shadow: 0px 0px 8px 0px #fafafa;
 }
-.card-product:hover .card-product-i:first-child .icons {
-  top: 0px;
+.card-product:hover .card-product-i:first-child .image {
+  opacity: .7;
+  transition: opacity ease .3s;
 }
 .card-product:hover .card-product-i:first-child .cartbtn,
 .card-product:hover .card-product-i:first-child .thumbs {
@@ -2341,10 +2342,15 @@ button:hover {
 .card-product .image {
   margin: 0 0 8px;
   position: relative;
+  transition: opacity ease .3s;
+  opacity: 1;
 }
 .card-product .image a,
 .card-product .image picture {
   display: block;
+}
+.card-product .image picture:nth-child(n +2) {
+  display: none;  
 }
 .card-product .image img {
   width: 100%;
@@ -2815,9 +2821,10 @@ button:hover {
 */
 .icons {
   position: absolute;
-  top: 0;
-  margin: 0 0 4px;
+  top: 10px;
+  margin: 0;
   z-index: 1;
+  left: 25px;
 }
 .icons li {
   display: inline-block;
@@ -2833,11 +2840,21 @@ button:hover {
   margin-left: 0;
 }
 .icons span {
-  padding: 2px 8px;
+  display: inline-block;
+}
+.icons span:before {
+  content: '';
+  box-shadow: 0 1px 1px 0 white;
+  width: 10px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 50%;
+  transform: translateX(50%) rotate(90deg);
 }
 .icons .new {
   color: #fefefe;
-  background-color: #f75b5b;
 }
 .favorite {
   position: absolute;
