@@ -2300,17 +2300,18 @@ button:hover {
   position: absolute;
   width: calc(100% + 2px);
   z-index: 500;
-  padding: 15px 15px;
-  top: -16px;
+  padding: 0 15px;
+  top: -1px;
   left: -1px;
   background-color: #ffffff;
   border: 1px solid #fafafa;
   -webkit-box-shadow: 0px 0px 8px 0px #fafafa;
-          box-shadow: 0px 0px 8px 0px #fafafa;
+  box-shadow: 0px 0px 8px 0px #fafafa;
 }
 .card-product:hover .card-product-i:first-child .icons {
-  top: 15px;
+  top: 0px;
 }
+.card-product:hover .card-product-i:first-child .cartbtn,
 .card-product:hover .card-product-i:first-child .thumbs {
   display: block;
 }
@@ -2320,11 +2321,7 @@ button:hover {
   display: block;
   margin: 1% 0;
 }
-.card-product:hover
-  .card-product-i:first-child
-  .thumbs
-  ul
-  li:nth-child(3n - 1) {
+.card-product:hover .card-product-i:first-child .thumbs ul li:nth-child(3n - 1) {
   margin: 1% 2%;
 }
 .card-product:hover .card-product-i:first-child .overview {
@@ -2342,7 +2339,7 @@ button:hover {
   font-size: calc(1rem - 2px);
 }
 .card-product .image {
-  margin: 22px 0 8px;
+  margin: 0 0 8px;
   position: relative;
 }
 .card-product .image a,
@@ -2351,9 +2348,6 @@ button:hover {
 }
 .card-product .image img {
   width: 100%;
-}
-.card-product .cartbtn {
-  display: none;
 }
 .card-product .brand {
   font-weight: bold;
@@ -2379,6 +2373,23 @@ button:hover {
   font-size: 125%;
   font-size: calc(1rem + 3px);
   font-weight: bold;
+}
+.card-product .cartbtn {
+ display: none;
+ margin: 0 0 5px;
+}
+.card-product .cartbtn select {
+  padding: calc(1rem - 2px) 1rem;
+  margin: 0px 0 10px;
+  width: 100%;
+  border: 1px solid #efefef;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(../img/i-pul-1x.png) no-repeat calc(100% - 10px) center;
+  background-size: 6px;
+}
+.card-product .cartbtn button {
+  padding: 1rem 0;
 }
 .card-product .thumbs {
   display: none;
@@ -2806,6 +2817,7 @@ button:hover {
   position: absolute;
   top: 0;
   margin: 0 0 4px;
+  z-index: 1;
 }
 .icons li {
   display: inline-block;
