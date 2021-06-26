@@ -43,15 +43,29 @@
                                         <h1><a href="#"><img src="img/logo.png" width="330" alt="UEMU STORE" class=""><span class="heading-text">UEMU STORE</span></a></h1>
                                     </div>
                                     <div class="o-sp-direction u-adjuster hidden-lg-up">
-                                        <i class="g-search"><a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a></i>
+                                        <div class="g-search-block">
+                                            <form action="#" method="get">
+                                                <input type="checkbox" id="keyword-checkbox-1">
+                                                <label for="keyword-checkbox-1"><i class="fa-solid fa-magnifying-glass-plus"></i></label>
+                                                <input type="reset" value="">
+                                                <div class="g-search-form">
+                                                    <div class="form-block">
+                                                            <input type="text" name="text" value="" onfocus="this.placeholder=''" onblur="this.placeholder='キーワードで探す'" placeholder="キーワードで探す" autocomplete="off">
+                                                            <input type="image" src="img/i-sea-1x.png">
+                                                            <input type="hidden" name="saleGroup" value="Normal">
+                                                            <input type="hidden" name="hid" value="search">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                         <i class="g-cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i><span></span></a></i>
                                     </div>
                                 </div>
                                 <div class="header-upper-table hidden-md-down">
                                     <div class="o-pc-direction u-adjuster">
                                         <div class="user">
-                                            <i><a href="#"><i class="fa-solid fa-right-to-bracket"></i>ログアウト</a></i>
-                                            <i><a href="#"><i class="fa-solid fa-user"></i>マイページ</a></i>
+                                            <i><a href="#"><i class="fa-solid fa-right-to-bracket"></i>ログイン</a></i>
+                                            <i><a href="#"><i class="fa-solid fa-user"></i>新規会員登録</a></i>
                                         </div>
                                     </div>
                                 </div>
@@ -100,28 +114,28 @@
                         </div> 
                                <div class="utility u-adjuster">
                                     <div class="g-search-block">
-                                        <div class="keyword-block">
-                                            <i><a href="#" title=""><i class="fa-solid fa-magnifying-glass-plus"></i><span>キーワード</span></a></i>
-                                        </div>
-                                        <div class="g-search-form">
-                                            <div class="form-block">
-                                                <form action="#" method="get">
-                                                    <input type="text" name="text" value="" onfocus="this.placeholder=''" onblur="this.placeholder='キーワードで探す'" placeholder="キーワードで探す" autocomplete="off">
-                                                    <input type="image" src="img/i-sea-1x.png">
-                                                    <input type="hidden" name="saleGroup" value="Normal">
-                                                    <input type="hidden" name="hid" value="search">
-                                                </form>
+                                        <form action="#" method="get">
+                                            <input type="checkbox" id="keyword-checkbox-2">
+                                            <label for="keyword-checkbox-2"><i class="fa-solid fa-magnifying-glass-plus"></i><span>検索</span></label>
+                                            <input type="reset" value="">
+                                            <div class="g-search-form">
+                                                <div class="form-block">
+                                                        <input type="text" name="text" value="" onfocus="this.placeholder=''" onblur="this.placeholder='キーワードで探す'" placeholder="キーワードで探す" autocomplete="off">
+                                                        <input type="image" src="img/i-sea-1x.png">
+                                                        <input type="hidden" name="saleGroup" value="Normal">
+                                                        <input type="hidden" name="hid" value="search">
+                                                </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                     <div class="g-goto-logout">
                                         <div class="logout-block">
-                                            <i><a href="#" title=""><i class="fa-solid fa-right-to-bracket"></i><span>ログアウト</span></a></i>
+                                            <i><a href="#" title=""><i class="fa-solid fa-right-to-bracket"></i><span>ログイン</span></a></i>
                                         </div>
                                     </div>
                                     <div class="g-goto-mypage">
                                         <div class="mypage-block">
-                                            <i><a href="#" title=""><i class="fa-solid fa-user"></i><span>マイページ</span></a></i>
+                                            <i><a href="#" title=""><i class="fa-solid fa-user"></i><span>新規会員登録</span></a></i>
                                         </div>
                                     </div>
                                     <div class="g-goto-cart">
