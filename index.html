@@ -50,6 +50,7 @@
                                                 <input type="reset" value="">
                                                 <div class="g-search-form">
                                                     <div class="form-block">
+                                                            <p class="search__label-title">SEARCH</p>
                                                             <input type="text" name="text" value="" onfocus="this.placeholder=''" onblur="this.placeholder='キーワードで探す'" placeholder="キーワードで探す" autocomplete="off">
                                                             <input type="image" src="img/i-sea-1x.png">
                                                             <input type="hidden" name="saleGroup" value="Normal">
@@ -119,11 +120,12 @@
                                             <label for="keyword-checkbox-2"><i class="fa-solid fa-magnifying-glass-plus"></i><span>検索</span></label>
                                             <input type="reset" value="">
                                             <div class="g-search-form">
+                                                <p class="search__label-title">SEARCH</p>
                                                 <div class="form-block">
-                                                        <input type="text" name="text" value="" onfocus="this.placeholder=''" onblur="this.placeholder='キーワードで探す'" placeholder="キーワードで探す" autocomplete="off">
-                                                        <input type="image" src="img/i-sea-1x.png">
-                                                        <input type="hidden" name="saleGroup" value="Normal">
-                                                        <input type="hidden" name="hid" value="search">
+                                                    <input type="text" name="text" value="" onfocus="this.placeholder=''" onblur="this.placeholder='キーワードで探す'" placeholder="キーワードで探す" autocomplete="off">
+                                                    <input type="image" src="img/i-sea-1x.png">
+                                                    <input type="hidden" name="saleGroup" value="Normal">
+                                                    <input type="hidden" name="hid" value="search">
                                                 </div>
                                             </div>
                                         </form>
@@ -139,9 +141,47 @@
                                         </div>
                                     </div>
                                     <div class="g-goto-cart">
-                                        <div class="cart-block">
-                                            <i><a href="#" title=""><i class="fa-solid fa-cart-shopping"></i><span>カート</span><span></span></a></i>
-                                        </div>
+                                        <form action="#" method="get">
+                                            <input type="checkbox" id="cart-checkbox-2">
+                                            <label for="cart-checkbox-2"><i class="fa-solid fa-cart-shopping"></i><span>カート</span><span></span></label>
+                                            <input type="reset" value="">
+                                            <div class="g-cart-form">
+                                                <p class="cart__label-title">CART</p>
+                                                <div class="form-block">
+                                                    <ul class="row">
+                                                        <li class="col-12 card-product">
+                                                            <div class="card-product-i">
+                                                                <div class="icons"><ul><li class="new"><span>NEW</span></li></ul></div>
+                                                                <div class="image">
+                                                                    <a href="#">
+                                                                        <section class="carousel" aria-label="Gallery">
+                                                                            <ol class="carousel__viewport">
+                                                                                <li tabindex="0" class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
+                                                                                    <div class="carousel__snapper"></div>
+                                                                                </li>
+                                                                                <li tabindex="0" class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
+                                                                                    <div class="carousel__snapper"></div>
+                                                                                </li>
+                                                                                <li tabindex="0" class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
+                                                                                    <div class="carousel__snapper"></div>
+                                                                                </li>
+                                                                                <li tabindex="0" class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
+                                                                                    <div class="carousel__snapper"></div>
+                                                                                </li>
+                                                                            </ol>
+                                                                        </section>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="overview">
+                                                                    <p class="brand">AAA</p><p class="name"><a href="#">テスト</a></p>
+                                                                    <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </form>                                    
                                     </div>
                                 </div>
                             </div>
