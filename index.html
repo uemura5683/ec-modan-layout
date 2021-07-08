@@ -65,7 +65,20 @@
                                 <div class="header-upper-table hidden-md-down">
                                     <div class="o-pc-direction u-adjuster">
                                         <div class="user">
-                                            <i><a href="#"><i class="fa-solid fa-right-to-bracket"></i>ログイン</a></i>
+                                            <i>
+                                                <form action="#" method="get">
+                                                    <input type="checkbox" id="login-checkbox">
+                                                    <label for="login-checkbox"><i class="fa-solid fa-right-to-bracket"></i><span>ログイン</span></label>
+                                                    <input type="reset" value="">
+                                                    <div class="g-login-form">
+                                                        <div class="form-block">
+                                                            <input type="text" name="text" value="" onfocus="this.placeholder=''" onblur="this.placeholder='アカウント'" placeholder="アカウント" autocomplete="off">
+                                                            <input type="password" name="password" value="" onfocus="this.placeholder=''" onblur="this.placeholder='パスワード'" placeholder="パスワード" autocomplete="off">
+                                                            <button type="submit" class="btn btn-primary">ログインする</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </i>
                                             <i><a href="#"><i class="fa-solid fa-user"></i>新規会員登録</a></i>
                                         </div>
                                     </div>
