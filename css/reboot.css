@@ -637,7 +637,7 @@ img {
   .g-cart {
     position: relative;
   }
-  .g-cart span {
+  .g-goto-cart label[for*="cart-checkbox"] span:last-child {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -671,7 +671,7 @@ img {
   }
   .g-search,
   .g-cart {
-    margin-bottom: 4px;
+    margin-bottom: 0px;
   }
   .g-search i:before,
   .g-cart i:before {
@@ -696,6 +696,15 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+<<<<<<< HEAD
+.o-pc-direction .user label {
+  cursor: pointer;
+}
+.o-pc-direction .user label span:hover {
+  text-decoration: underline;
+}
+=======
+>>>>>>> main
 .o-pc-direction .user input[type="checkbox"],
 .o-pc-direction .user input[type="reset"] {
   display: none;
@@ -728,6 +737,7 @@ img {
 }
 .o-pc-direction i:first-child {
   margin-left: 0;
+  cursor: pointer;
 }
 .o-pc-direction i:before {
   font-size: 18px;
@@ -902,7 +912,8 @@ img {
     border-radius: 0;
 }
 .g-search-block input[id*='keyword-checkbox'] ~ label {
-  margin: 0;  
+  margin: 0;
+  cursor: pointer;
 }
 .g-search-block .g-search-form {
   position: fixed;
@@ -997,7 +1008,8 @@ img {
   text-align: center;
 }
 .g-goto-cart label[for*="cart-checkbox"] {
-  margin: 0;  
+  margin: 0;
+  cursor: pointer;
 }
 
 .g-goto-cart input[type="reset"] {
@@ -1011,7 +1023,7 @@ img {
     z-index: 10;
     border-radius: 0;
 }
-.g-goto-cart input[id*='cart-checkbox-2']:checked ~ input[type="reset"] {
+.g-goto-cart input[id*='cart-checkbox']:checked ~ input[type="reset"] {
   display: block;
 }
 .g-goto-cart .g-cart-form {
@@ -1057,8 +1069,8 @@ img {
 .g-goto-cart .form-block .card-product .overview > p > * {
   display: inline-block;
 }
-.g-goto-cart input[id*='cart-checkbox-2']:checked ~ .g-cart-form {
-  right: 0;
+.g-goto-cart input[id*='cart-checkbox']:checked ~ .g-cart-form {
+  right: 0px;
   opacity: 1;
   transition: right ease-in-out .3s, opacity ease-in-out .3s, display ease-in-out 0s;
   width: 350px;
@@ -1113,6 +1125,21 @@ img {
   }
   [class*='g-search-'] i:before, [class*='g-goto-'] i:before, [class*='g-howto-'] i:before {
     font-size: 18px;
+  }
+  .is-fixed .g-goto-cart .g-cart-form {
+    top: 0;
+  }
+  .g-goto-cart input[id*='cart-checkbox']:checked ~ .g-cart-form {
+    width: 80%;
+    right: 0;
+    height: 100vh;
+   }
+  .g-goto-cart .g-cart-form .card-product {
+    padding: 0
+  }
+  .g-goto-cart .form-block {
+    overflow-x: scroll;
+    height: calc(100% - 62px);
   }
 }
 
@@ -1780,7 +1807,7 @@ img {
 .o-drawer-close {
   overflow: hidden;
   position: absolute;
-  top: 16px;
+  top: 0;
   left: calc(85% + 1em);
 }
 .o-drawer-close i {
