@@ -696,12 +696,15 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+<<<<<<< HEAD
 .o-pc-direction .user label {
   cursor: pointer;
 }
 .o-pc-direction .user label span:hover {
   text-decoration: underline;
 }
+=======
+>>>>>>> main
 .o-pc-direction .user input[type="checkbox"],
 .o-pc-direction .user input[type="reset"] {
   display: none;
