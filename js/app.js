@@ -84,86 +84,7 @@
     shouldMbFunction = function () {
         return ( ( window.innerWidth || document.documentElement.clientWidth || 0 ) <= thresholdsp );
     };
-    /**
-     * l-sticky
-     * @param  [] []
-     * @return [] []
-    */
-    ( function () {
-        if ( head ) {
-            var pagtop = window.pageYOffset || document.documentElement.scrollTop
-              , sticky = head.querySelector( '.u-fixed-wrapper' )
-              , lower  = head.querySelector( '.c-header-lower' )
-              , spreg  = ( head.getBoundingClientRect().top + pagtop )
-              , pcreg  = ( lower.getBoundingClientRect().top + pagtop )
-              , status = 'is-fixed'
-              , timer  = false
-              , scroll = 0;
-            var
-            observer = function () {
-                scroll = ( window.pageYOffset || document.documentElement.scrollTop );
-                if ( (! scroll ) && scrollTop ) {
-                    scroll = scrollTop;
-                }
-                if ( calculate() ) {
-                    if ( calculate() == 0 || calculate() > head.clientHeight ) {
-                        (! shouldSpFunction() )
-                            ? headerHeight = 175
-                            : headerHeight = 60;
-                        pagtop = scroll;  
-                        pagtop >= headerHeight
-                            ? execute()
-                            : restore();
-                    } else {
-                        pagtop = scroll;
-                        pagtop >= calculate()
-                            ? execute()
-                            : restore();
-                    }
-                }
-                else { 
-                    (! shouldSpFunction() )
-                        ? headerHeight = 175
-                        : headerHeight = 60;
-                    pagtop = scroll;  
-                    pagtop >= headerHeight
-                        ? execute()
-                        : restore();
-                }
-                return false;
-            },
-            calculate = function () {
-                return ( sticky )
-                  ? ( shouldSpFunction() )
-                      ? spreg
-                      : pcreg
-                  : 0;
-            },
-            execute = function () {
-                return ( sticky )
-                  ? sticky.classList.add( status )
-                  : false;
-            },
-            restore = function () {
-                return ( sticky )
-                  ? sticky.classList.remove( status )
-                  : false;
-            },
-            apply = function () {
-                observer();
-            },
-            timer = function () {
-                if ( timer ) {
-                    clearTimeout( timer );
-                }
-                timer = setTimeout( function () {
-                    apply();
-                }, 200 );
-            };
-            window.addEventListener( 'scroll', apply, false );
-            window.addEventListener( 'resize', timer, false );
-        }
-    } )();
+
     /**
      * l-drawer
      * @param  [] []
@@ -449,11 +370,6 @@
         creatFragment = function ( node ) {
             var fragment = [];
             for ( var i = 0, l = node.length; i < l; i++ ) {
-                var yiels = node[i].nextSibling.querySelector( '.yield' ).textContent
-                  , span  = document.createElement( 'span' )
-                  , lyric = document.createTextNode( yiels );
-                span.appendChild( lyric );
-                fragment.push( span.outerHTML );
             }
             return fragment;
         },
