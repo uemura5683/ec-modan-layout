@@ -49,6 +49,30 @@
                                         </a>
                                     </h1>
                                 </div>
+                                <div class="o-sns">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/twitter.png" width="100" alt="Twitter" class="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/github.png" width="100" alt="Github" class="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/nu-blog.png" width="100" alt="Nu-blog" class="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/nu-portfolio.png" width="100" alt="Nu-stack" class="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="c-header-lower">
@@ -308,7 +332,7 @@
                     <div class="l-main">
                         <div class="o-search-content c-widget">
                             <div class="o-pager pagerTopper">
-                                <div class="u-pull-left">
+                                <div class="o-pager-inner">
                                     <div class="pager-Number">
                                         対象商品
                                         <span>343</span>件
@@ -719,7 +743,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="u-pull-right hidden-md-down">
+                                <div class="o-pager-inner hidden-md-down">
                                     <ul class="pagination">
                                         <li class="page-item page-prev">
                                             <a class="page-link" href="#" rel="prev">
@@ -757,42 +781,22 @@
                             </div>
                             <div class="o-sort">
                                 <div class="o-sort-radio hidden-md-down">
-                                    <form
-                                      method="get"
-                                      action="#">
+                                    <form method="get" action="#">
                                         <label>
-                                            <input
-                                              type="radio"
-                                              name="SaleType"
-                                              onchange="this.form.submit();"
-                                              value="All" checked="">allitem
+                                            <input type="radio" name="SaleType" onchange="this.form.submit();" value="All" checked="">allitem
                                         </label>
                                         <label>
-                                            <input
-                                              type="radio"
-                                              name="SaleType"
-                                              onchange="this.form.submit();"
-                                              value="Normal">proper
+                                            <input type="radio" name="SaleType" onchange="this.form.submit();" value="Normal">proper
                                         </label>
                                         <label>
-                                            <input
-                                              type="radio"
-                                              name="SaleType"
-                                              onchange="this.form.submit();"
-                                              value="SaleOff">saleoff
+                                            <input type="radio" name="SaleType" onchange="this.form.submit();" value="SaleOff">saleoff
                                         </label>
                                     </form>
                                 </div>
                                 <div class="o-sort-pulldown">
                                     <div class="o-sort-select">
-                                    <form
-                                      method="get"
-                                      action="#">
-                                        <select
-                                          id="sort"
-                                          name="sort"
-                                          onchange="this.form.submit();"
-                                            class="f-layout">
+                                    <form method="get" action="#">
+                                        <select id="sort" name="sort" onchange="this.form.submit();" class="f-layout">
                                             <option value="newest">newest</option>
                                             <option value="price-asc">price asc</option>
                                             <option value="price-desc">price desc</option>
@@ -800,14 +804,8 @@
                                     </form>
                                     </div>
                                     <div class="o-sort-select hidden-lg-up">
-                                    <form
-                                      method="get"
-                                      action="#">
-                                        <select
-                                          id="SaleType"
-                                          name="SaleType"
-                                          onchange="this.form.submit();"
-                                            class="f-layout">
+                                    <form method="get" action="#">
+                                        <select id="SaleType" name="SaleType" onchange="this.form.submit();" class="f-layout">
                                             <option value="All">allitem</option>
                                             <option value="Normal">proper</option>
                                             <option value="SaleOff">saleoff</option>
@@ -815,14 +813,8 @@
                                     </form>
                                     </div>
                                     <div class="o-sort-select hidden-md-down">
-                                    <form
-                                      method="get"
-                                      action="#">
-                                        <select
-                                          id="tockLevelStatus"
-                                          name="stockLevelStatus"
-                                          onchange="this.form.submit();"
-                                            class="f-layout">
+                                    <form method="get" action="#">
+                                        <select id="tockLevelStatus" name="stockLevelStatus" onchange="this.form.submit();" class="f-layout">
                                             <option value="All">allstock</option>
                                             <option value="inStock">instock</option>
                                         </select>
