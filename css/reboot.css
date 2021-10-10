@@ -3224,7 +3224,7 @@ button:hover {
   width: 50%;
 }
 .o-pager > div:last-child {
-  margin: 0.5rem 0 0 auto;
+  margin: 0;
   justify-content: flex-end;
 }
 .o-pager > div:first-child {
@@ -3673,7 +3673,7 @@ span.page-link:hover {
   top: calc(50% - 0.5rem);
   right: 1rem;
 }
-.pagetop {
+.pagetop a {
   position: fixed;
   right: 5%;
   bottom: 10px;
@@ -3692,8 +3692,8 @@ span.page-link:hover {
   z-index: 995;
   opacity: 0.7;
 }
-.pagetop:before,
-.pagetop:after {
+.pagetop a:before,
+.pagetop a:after {
   content: '';
   border-top: 0px solid white;
   border-top-width: 1px;
@@ -3702,30 +3702,15 @@ span.page-link:hover {
   width: 10px;
   top: 50%;
 }
-.pagetop:before{
+.pagetop a:before{
   left: calc(50% + 3px);
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
           transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
-.pagetop:after{
+.pagetop a:after{
   left: calc(50% - 3px);
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
           transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-}
-.pagetop.absolute {
-  margin-top: 20px;
-  position: absolute;
-  top: 0px;
-}
-.pagetop.is-hide {
-  bottom: -60px;
-  -webkit-transition: 0.5s ease;
-          transition: 0.5s ease;
-  -webkit-transition-property: top, bottom, opacity;
-          transition-property: top, bottom, opacity;
-}
-.pagetop.is-show {
-  bottom: 30px;
 }
 
 @media (max-width: 1360px) {
@@ -3740,11 +3725,5 @@ span.page-link:hover {
 @media (max-width: 991px) {
   .pagetop {
     display: block !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .pagetop.absolute {
-    margin-top: -45px;
   }
 }
