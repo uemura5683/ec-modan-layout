@@ -15,7 +15,9 @@
     font-size: 50%;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   font-family: "ヒラギノ角ゴ Pro W3",
@@ -1045,7 +1047,7 @@ img {
 @media (max-width: 991px) {
   .l-footer-upper {
     padding: 48px 0;
-    margin: 48px 0 0;
+    margin: 0;
   }
 }
 
@@ -1227,7 +1229,9 @@ img {
   line-height: 60px;
   text-align: left;
   background-color: #555555;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .filter-menu .u-return.filter:before,
 .filter-menu .u-return.filter:after {
@@ -1272,7 +1276,7 @@ img {
   -webkit-overflow-scrolling: touch;
   position: relative;
   margin-left: -325px;
-  height: inherit;
+  height: calc(100% - 60px);
   width: 100%;
   background-color: #ffffff;
   transition: margin 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1688,8 +1692,8 @@ img {
 .o-drawer-close {
   overflow: hidden;
   position: absolute;
-  top: 5px;
-  left: 22px;
+  top: 20px;
+  left: 15px;
 }
 .o-drawer-close a {
   display: block;
@@ -2904,6 +2908,19 @@ button:hover {
   top: 7px;
 }
 
+.o-filter .c-slide-wrap input[type="checkbox"] {
+  display: none;
+}
+.o-filter .c-slide-wrap-inner {
+  display: none;
+}
+.o-filter .c-slide-wrap input[type="checkbox"]:checked ~ label span:before {
+  content: none;
+}
+.o-filter .c-slide-wrap input[type="checkbox"]:checked ~ .c-slide-wrap-inner {
+  display: block;
+}
+
 .o-filter-category li {
   border: none;
 }
@@ -3580,7 +3597,10 @@ span.page-link:hover {
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
           transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 }
-
+.pagetop a {
+  display: block;
+  height: 100%;
+}
 @media (max-width: 1360px) {
   .pagetop {
     right: 2%;

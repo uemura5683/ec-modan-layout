@@ -443,9 +443,16 @@
                                                                         <p class="u-heading">カテゴリ</p>
                                                                         <ul class="o-fold">
                                                                             <li class="o-l-1 c-slide-wrap">
-                                                                                <p class="u-menu heading">
+                                                                                <input
+                                                                                    type="checkbox"
+                                                                                    id="c-cote"
+                                                                                >
+                                                                                <label
+                                                                                    for="c-cote"
+                                                                                    class="u-menu heading checkbox"
+                                                                                >
                                                                                     <span>コート</span>
-                                                                                </p>
+                                                                                </label>
                                                                                 <div class="c-slide-wrap-inner">
                                                                                     <ul class="o-fold">
                                                                                         <li class="o-l-2">
@@ -482,9 +489,16 @@
                                                                                 </div>
                                                                             </li>
                                                                             <li class="o-l-1 c-slide-wrap">
-                                                                                <p class="u-menu heading">
+                                                                                <input
+                                                                                    type="checkbox"
+                                                                                    id="c-buruzon"
+                                                                                >
+                                                                                <label
+                                                                                    for="c-buruzon"
+                                                                                    class="u-menu heading checkbox"
+                                                                                >
                                                                                     <span>ブルゾン</span>
-                                                                                </p>
+                                                                                </label>
                                                                                 <div class="c-slide-wrap-inner">
                                                                                     <ul class="o-fold">
                                                                                         <li class="o-l-2">
@@ -849,13 +863,11 @@
                                                             <picture>
                                                                 <source
                                                                   media="(max-width:991px)"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x">
+                                                                  loading="lazy"
+                                                                  src="img/item-thumbs-01.jpg">
                                                                 <img
                                                                   src="img/item-thumbs-01.jpg"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-src="item-thumbs-01.jpg"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
+                                                                  loading="lazy"
                                                                   alt="">
                                                             </picture>
                                                         </a>
@@ -941,13 +953,11 @@
                                                             <picture>
                                                                 <source
                                                                   media="(max-width:991px)"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x">
+                                                                  loading="lazy"
+                                                                  src="img/item-thumbs-01.jpg">
                                                                 <img
                                                                   src="img/item-thumbs-01.jpg"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-src="item-thumbs-01.jpg"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
+                                                                  loading="lazy"
                                                                   alt="">
                                                             </picture>
                                                         </a>
@@ -1035,13 +1045,11 @@
                                                             <picture>
                                                                 <source
                                                                   media="(max-width:991px)"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x">
+                                                                  loading="lazy"
+                                                                  src="img/item-thumbs-01.jpg">
                                                                 <img
                                                                   src="img/item-thumbs-01.jpg"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-src="item-thumbs-01.jpg"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
+                                                                  loading="lazy"
                                                                   alt="">
                                                             </picture>
                                                         </a>
@@ -1129,13 +1137,11 @@
                                                             <picture>
                                                                 <source
                                                                   media="(max-width:991px)"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x">
+                                                                  loading="lazy"
+                                                                  src="img/item-thumbs-01.jpg">
                                                                 <img
                                                                   src="img/item-thumbs-01.jpg"
-                                                                  srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
-                                                                  data-src="item-thumbs-01.jpg"
-                                                                  data-srcset="img/item-thumbs-01.jpg, img/item-thumbs-01.jpg 2x"
+                                                                  loading="lazy"
                                                                   alt="">
                                                             </picture>
                                                         </a>
@@ -1166,7 +1172,7 @@
           id="page-footer"
           class="page-footer">
             <footer>
-                <div class="pagetop hidden-md-down"><a href="#">ページトップへ</a></div>
+                <div class="pagetop hidden-md-down"><a href="#wrapper">ページトップへ</a></div>
                 <div class="l-footer-upper">
                     <div class="container">
                         <div class="row">
@@ -1340,9 +1346,6 @@
         </nav>
     </div>
 </div>
-<script type="text/javascript" src="js/jquery.cookie.js"></script>
-<script type="text/javascript" src="js/jquery.velocity.min.js"></script>
-<script type="text/javascript" src="js/handlebars.min.js"></script>
 <script type="text/javascript" src="js/remodal.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 </html>

@@ -178,9 +178,7 @@
                   , childs = ancest.children
                   , siblings = ( getSiblings( parent, childs ) )
                   , target = siblings.filter( function ( v, i ) {
-                        return ( jQuery.cookie( gen_key ) && v.getAttribute( dom_gen ) )
-                          ? v.getAttribute( dom_gen ) === jQuery.cookie( gen_key )
-                          : i === 0;
+                        return i === 0;
                     } );
                 scrollTop = scrollTop
                   ? scrollTop
@@ -343,9 +341,7 @@
               , childs = ancest.children
               , siblings = ( getSiblings( parent, childs ) )
               , target = siblings.filter( function ( v, i ) {
-                    return ( jQuery.cookie( gen_key ) && v.getAttribute( dom_gen ) )
-                      ? v.getAttribute( dom_gen ) === jQuery.cookie( gen_key )
-                      : i === 0;
+                    return i === 0;
                 } );
             scrollTop = scrollTop
               ? scrollTop
@@ -415,13 +411,7 @@
             }
         },
         setInitCookie = function () {
-          if( jQuery.cookie( gen_key ) ) {
-            return ( jQuery.cookie( gen_key ) === this.value )
-              ? this.checked = true
-              : this.checked = false;
-          } else {
             return this.checked = true;
-          }
         },
         filterSelect = function () {
             var gender = 'o-filter-gender'
@@ -477,13 +467,8 @@
                 checker[ii].addEventListener( 'change', contentsYield, false );
             }
             for ( var ii = 0, ll = rgender.length; ii < ll; ii++ ) {
-                if ( jQuery.cookie( gen_key ) !== null ) {              
-                    rgender[ii].addEventListener( 'load', setInitCookie, false );
-                    trigger( rgender[ii], 'load' );
-                } else {
-                    rgender[0].addEventListener( 'load', setInitCookie, false );
-                    trigger( rgender[0], 'load' );
-                }
+                rgender[0].addEventListener( 'load', setInitCookie, false );
+                trigger( rgender[0], 'load' );
                 rgender[ii].addEventListener( 'change', filterSelect, false );
                 trigger( rgender[ii], 'change' );
             }
@@ -529,14 +514,6 @@
             dom.classList.add( status );
             return false;
         },
-        changeGender = function ( dom ) {
-            for ( var i = 0, l = selector.length; i < l; i++ ) {
-                selector[i].options.selectedIndex = ( dom.getAttribute( set_gen ) - 1 );
-                trigger( selector[i], 'change' );
-            }
-            setCookie( gen_key, dom.getAttribute( set_gen ) );
-            return false;
-        },
         washOut = function () {
             for ( var i = 0, l = follower.length; i < l; i++ ) {
                 if ( follower[i].checked ) {
@@ -576,7 +553,6 @@
         exchange = function ( event ) {
             event.preventDefault();
             changeStatus( this );
-            changeGender( this );
             bnrchange( this );
             return false;
         };
@@ -594,55 +570,6 @@
         }
         for ( var i = 0, l = geninput.length; i < l; i++ ) {
             geninput[i].addEventListener( 'change', stageSet, false );
-        }
-    } )();
-    /**
-     * c-slide-wrap
-     * @param  [] []
-     * @return [] []
-    */
-    ( function () {
-        var headings = document.querySelectorAll( '.c-slide-wrap .heading' )
-          , duration = 500
-          , status = 'active';
-        var
-        ovserver = function ( event ) {
-            event.preventDefault();
-            if ( this.parentNode.classList.contains( status ) ) {
-                this.parentNode.classList.remove( status );
-                slide( this.nextElementSibling, 'slideUp', this );
-            }
-            else {
-                this.parentNode.classList.add( status );
-                slide( this.nextElementSibling, 'slideDown', this );
-            }
-            return false;
-        },
-        slide = function ( target, attribute, origin ) {
-            if (! shouldSpFunction() ) {
-                return;
-            }
-            jQuery.Velocity(
-                target, attribute,
-                {
-                    begin: function () {
-                        detach( origin, 'click', ovserver )
-                    },
-                    complete: function () {
-                        attach( origin, 'click', ovserver )
-                    }
-                },
-                { duration: duration }
-            );
-        },
-        attach = function ( target, event, func ) {
-            target.addEventListener( event, func, false );
-        },
-        detach = function ( target, event, func ) {
-            target.removeEventListener( event, func, false );
-        };
-        for ( var i = 0, l = headings.length; i < l; i++ ) {
-            attach( headings[i], 'click', ovserver );
         }
     } )();
     /**
@@ -670,104 +597,6 @@
         }
     } )();
     /**
-     * o-lazy
-     * @param  [] []
-     * @return [] []
-    */
-    ( function () {
-        var duration  = 480
-          , animation = 'swing'
-          , selectors = document.querySelectorAll(
-                [
-                  'img[data-src]',
-                  'img[data-srcset]',
-                  'source[data-src]',
-                  'source[data-srcset]'
-                ].join( ', ' )
-            );
-        var
-        observe = function () {
-            selectors = document.querySelectorAll(
-                [
-                  'img[data-src]',
-                  'img[data-srcset]',
-                  'source[data-src]',
-                  'source[data-srcset]'
-                ].join( ', ' )
-            );
-        },
-        collect = function ( target ) {
-            return {
-                osrc: target.getAttribute( 'src' ),
-                fsrc: target.getAttribute( 'data-src' ),
-                oset: target.getAttribute( 'srcset' ),
-                fset: target.getAttribute( 'data-srcset' ),
-            };
-        },
-        lonload = function () {
-            for ( var i = 0, l = selectors.length; i < l; i++ ) {
-                var target = selectors[i]
-                  , attribute = collect( target );
-                if ( ( attribute['fsrc'] ) && ( attribute['osrc'] !== attribute['fsrc'] ) ) {
-                    target.setAttribute( 'src', attribute['fsrc'] );
-                }
-                if ( ( attribute['fset'] ) && ( attribute['oset'] !== attribute['fset'] ) ) {
-                    target.setAttribute( 'srcset', attribute['fset'] );
-                }
-            }
-        },
-        lonscroll = function () {
-            for ( var i = 0, l = selectors.length; i < l; i++ ) {
-                var target = selectors[i]
-                  , attribute = collect( target )
-                  , pos = target.getBoundingClientRect().top - ( window.innerHeight || document.documentElement.clientHeight );
-                if ( ( window.pageYOffset || document.documentElement.scrollTop ) > pos ) {
-                    if ( ( attribute['fsrc'] ) && ( attribute['osrc'] !== attribute['fsrc'] ) ) {
-                        target.setAttribute( 'src', attribute['fsrc'] );
-                    }
-                    if ( ( attribute['fset'] ) && ( attribute['oset'] !== attribute['fset'] ) ) {
-                        target.setAttribute( 'srcset', attribute['fset'] );
-                    }
-                }
-            }
-        };
-        if ( shouldSpFunction() ) {
-            window.addEventListener( 'load', lonload, false );
-        }
-        else {
-            window.addEventListener( 'load', lonscroll, false );
-            window.addEventListener( 'scroll', lonscroll, false );
-        }
-        document.addEventListener( 'DOMNodeInserted', observe, false );
-    } )();
-    /**
-     * c-navi
-     * @param  [] []
-     * @return [] []
-    */
-    ( function () {
-        var $list = $( '.facet .o-fold.list li.active' )
-          ,  $title = $list.find( '.o-l-1-h' )
-          ,  $btn  = $( '.facet .o-fold.list .o-l-1-h a' );
-        if ( $list ) {
-            $list.find( '.o-l-1-c' ).css( { 'display':'block' } );
-            $title.addClass( 'is-selected' );
-        }
-        $btn.on( 'click', function( e ) {
-          var $this = $( this )
-            , $p_title = $this.closest( 'h4' )
-            , $p_list = $this.closest( '.o-l-1' );
-          e.preventDefault();
-            if ( $p_list.hasClass( 'active' ) ) {
-                $p_list.removeClass( 'active' );
-                $p_list.find( '.o-l-1-c' ).slideUp();
-            } else{
-                $p_list.addClass( 'active' );
-                $p_list.find( '.o-l-1-c' ).slideDown();
-            }
-        } );
-    } )();
-    /**
      * c-filter-remodal
      * @param  [ lib ] [ jQuery ]
      * @return [ lib ] [ remodal ]
@@ -787,77 +616,6 @@
             window.scrollTo( 0, scrollTop );
             body.scrollTop = scrollTop;
         });
-    } )();
-    /**
-     * u-data-href
-     * @param  [ lib ] [ jQuery ]
-     * @return [ lib ] [ SlickSlider ]
-    */
-    ( function () {
-        if ( head ) {
-            var anchors = document.querySelectorAll( '[data-href]' )
-              , lower   = head.querySelector( '.c-header-lower' );
-            var
-            getPos = function ( node ) {
-                var top = window.pageYOffset || document.documentElement.scrollTop
-                  , ids = node.getAttribute( 'data-href' )
-                  , pos = ids.indexOf( '#' ) === 0
-                      ? document.getElementById( ids.substr( 1 ) ).getBoundingClientRect().top + top
-                      : document.getElementById( ids ).getBoundingClientRect().top + top
-                  , padding = ( shouldSpFunction() )
-                      ? 80
-                      : 100;
-                return pos - padding;
-            },
-            shouldScroll = function ( event ) {
-                event.preventDefault();
-                scrollTo( html, getPos( this ), 240 );
-                scrollTo( body, getPos( this ), 240 );
-            };
-            for ( var i = 0, l = anchors.length; i < l; i++ ) {
-                anchors[i].addEventListener( 'click', shouldScroll, false );
-            }
-        }
-    } )();
-    /**
-     * c-thumnail
-     * @param  [ lib ] [ jQuery ]
-     * @return [ lib ] [ remodal ]
-    */
-    ( function () {
-        var cardpro = jQuery( '.widget-search .card-product' ),
-            licrdpr = 'card-product-i';
-        var 
-        ProductCard = function ( wrapper ) {
-            var $target = wrapper.find( '.' + licrdpr ),
-                $length = $target.length;
-            if ( $length >= 2 ) {
-                $target.each( function( i ) {
-                    if( i !== 0 ) $target.eq( i ).detach();
-                } );
-            } else {
-                wrapper.append( $target.clone() );
-            }
-        }
-
-        cardpro.on( {
-          'mouseenter' : function () {
-             var $this   = jQuery( this ),
-                 $licrdpr = $this.find( '.' + licrdpr );
-
-             if ( ! shouldMbFunction() && $licrdpr.get( 0 ) ) {
-                 ProductCard( $this );
-             }
-          },
-          'mouseleave' : function () {
-             var $this = jQuery( this ),
-                 $licrdpr = $this.find( '.' + licrdpr );
-
-             if ( ! shouldMbFunction() && $licrdpr.get( 0 ) ) {
-                ProductCard( $this );
-             }
-          }
-        } );
     } )();
 
 } )();
