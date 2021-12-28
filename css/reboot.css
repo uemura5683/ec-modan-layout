@@ -2023,8 +2023,6 @@ button:hover {
   opacity: 0;
   display: block;
   pointer-events: none;
-  -webkit-transition: ease .3s opacity;
-  transition: ease .3s opacity;
 }
 
 .c-header-lower .category-region .o-genc .region:first-child,
@@ -3214,7 +3212,7 @@ button:hover {
     position: relative;
     margin: 0 0 20px;
 }
-.t-main ol {
+.t-main ul {
     position: absolute;
     top: 0;
     right: 0;
@@ -3227,7 +3225,7 @@ button:hover {
     scroll-snap-type: x mandatory;
     margin: 0;
 }
-.t-main ol li {
+.t-main ul li {
     background-size: 100%;
     position: relative;
     flex: 0 0 100%;
@@ -3236,7 +3234,7 @@ button:hover {
     top: -50%;
     transform: translatey(50%);
 }
-.t-main ol li .carousel__snapper {
+.t-main ul li .t-main_carousel {
     position: absolute;
     top: 0;
     left: 0;
@@ -3245,18 +3243,18 @@ button:hover {
     scroll-snap-align: center;
 }
 @media (hover: hover) {
-  .t-main ol li .carousel__snapper {
+  .t-main ul li .t-main_carousel {
     animation-name: tonext, snap;
     animation-timing-function: ease;
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }
-  .t-main ol li:last-child .carousel__snapper {
+  .t-main ul li:last-child .t-main_carousel {
     animation-name: tostart, snap;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .t-main ol li  {
+  .t-main ul li  {
     animation-name: none;
   }
 }
@@ -3265,8 +3263,8 @@ button:hover {
     padding: 50% 0 0;
   }
 }
-.t-main ol li:hover .carousel__snapper,
-.t-main ol li:focus-within .carousel__snapper {
+.t-main ul li:hover .t-main_carousel,
+.t-main ul li:focus-within .t-main_carousel {
   animation-name: none;
 }
 
@@ -3352,4 +3350,51 @@ button:hover {
 }
 .t-ranking li:hover a span:not(.rank) {
   opacity: 1;
+}
+
+/**
+* thumb banner
+**/
+.t-thumb {
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 20px;
+  display: flex;
+}
+.t-thumb ul {
+  display: flex;
+  width: 100%;
+}
+.t-thumb .t-thumb_slider {
+  animation: ticker-kf 10s linear infinite;
+  min-width: calc(100% / 6);
+}
+.t-thumb .t-thumb_slider a {
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+  padding-top: 70%;
+  width: 100%;
+}
+@keyframes ticker-kf {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-600%);
+  }
+}
+@media (max-width: 768px) {
+  .t-thumb .t-thumb_slider {
+    min-width: calc(100% / 3);
+  }
+  @keyframes ticker-kf {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
 }
