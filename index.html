@@ -9,1545 +9,1462 @@
     <link rel="stylesheet" href="css/reboot.css">
   </head>
   <body cz-shortcut-listen="true">
-      <div id="wrapper">
-        <div class="wrapper-inner">
-          <header id="l-page-header">
-            <div class="c-header-upper">
-              <div class="c-drawer-button hidden-lg-up">
-                  <div class="trigger">
-                    <input type="checkbox" id="c-drawer-btn">
-                    <label for="c-drawer-btn" class="fa-solid fa-bars"></label>
-                    <div id="c-drawer-menu">
-                      <div class="c-drawer-inner">
-                        <nav>
-                          <div class="user">
-                            <p class="u-menu lgi">
-                              <a class="u-adjuster" href="#">
-                                <i class="fa-solid fa-user"></i><span>ログイン</span>
-                              </a>
-                            </p>
-                            <p class="u-menu reg">
-                              <a class="u-adjuster" href="#" target="_self">
-                                <i class="fa-solid fa-pen"></i><span>新規会員登録</span>
-                              </a>
-                            </p>
+    <div id="wrapper">
+      <div class="wrapper-inner">
+        <header id="l-page-header">
+          <div class="c-header-upper">
+            <div class="c-drawer-button hidden-lg-up">
+                <div class="trigger">
+                  <input type="checkbox" id="c-drawer-btn">
+                  <label for="c-drawer-btn" class="fa-solid fa-bars"></label>
+                  <div id="c-drawer-menu">
+                    <div class="c-drawer-inner">
+                      <nav>
+                        <div class="user">
+                          <p class="c-menu">
+                            <a class="c-arrow" href="#">
+                              <i class="fa-solid fa-user"></i><span>ログイン</span>
+                            </a>
+                          </p>
+                          <p class="c-menu">
+                            <a class="c-arrow" href="#" target="_self">
+                              <i class="fa-solid fa-pen"></i><span>新規会員登録</span>
+                            </a>
+                          </p>
+                        </div>
+                        <div class="g-search-form">
+                          <div class="form-block">
+                            <form action="#" method="get">
+                              <input type="text" name="text" value="" placeholder="キーワードで探す" autocomplete="off">
+                              <input type="hidden" name="salegroup" value="normal">
+                              <input type="hidden" name="hid" value="search">
+                              <i class="fa-solid fa-search"></i>
+                            </form>
                           </div>
-                          <div class="g-search-form">
-                            <div class="form-block">
-                              <form action="#" method="get">
-                                <input type="text" name="text" value="" placeholder="キーワードで探す" autocomplete="off">
-                                <input type="hidden" name="salegroup" value="normal">
-                                <input type="hidden" name="hid" value="search">
-                                <i class="fa-solid fa-search"></i>
-                              </form>
+                        </div>
+                        <div class="c-brand-region">
+                          <input type="checkbox" id="c-drawer-brand-select" class="c-drawer-select">
+                          <input type="checkbox" id="c-drawer-brand-reset" class="c-drawer-reset">
+                          <label for="c-drawer-brand-select">
+                            <span>ブランドから探す</span>
+                          </label>
+                          <label for="c-drawer-brand-reset">
+                            <span>閉じる</span>
+                          </label>
+                          <div class="c-util-nav">
+                            <div class="c-util-nav-inner">
+                              <p class="c-return">戻る</p>
+                              <p class="c-heading">ブランド</p>
+                              <ul class="c-fold">
+                                <li class="c-menu">
+                                  <a href="#">AAA</a>
+                                </li>
+                                <li class="c-menu">
+                                  <a href="#">BBB</a>
+                                </li>
+                                <li class="c-menu">
+                                  <a href="#">CCC</a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
-                          <div class="c-brand-region region">
-                            <input type="checkbox" id="c-drawer-brand-select" class="c-drawer-select">
-                            <input type="checkbox" id="c-drawer-brand-reset" class="c-drawer-reset">
-                            <label for="c-drawer-brand-select">
-                              <span>ブランドから探す</span>
-                            </label>
-                            <label for="c-drawer-brand-reset">
-                              <span>閉じる</span>
-                            </label>
-                            <div class="c-util-nav">
-                              <div class="c-util-nav-inner">
-                                <p class="u-return">戻る</p>
-                                <p class="u-heading">ブランド</p>
-                                <ul class="c-fold">
-                                  <li class="c-l-1 u-menu">
-                                    <a href="#">AAA</a>
-                                  </li>
-                                  <li class="c-l-1 u-menu">
-                                    <a href="#">BBB</a>
-                                  </li>
-                                  <li class="c-l-1 u-menu">
-                                    <a href="#">CCC</a>
-                                  </li>
-                                </ul>
-                              </div>
+                        </div>
+                        <div class="c-category-region">
+                          <input type="checkbox" id="c-drawer-category-select" class="c-drawer-select">
+                          <input type="checkbox" id="c-drawer-category-reset" class="c-drawer-reset">
+                          <label for="c-drawer-category-select">
+                            <span>カテゴリから探す</span>
+                          </label>
+                          <label for="c-drawer-category-reset">
+                            <span>閉じる</span>
+                          </label>
+                          <div class="c-util-nav">
+                            <div class="c-util-nav-inner">
+                              <p class="c-return">戻る</p>
+                              <p class="c-heading">カテゴリ</p>
+                              <ul class="c-fold">
+                                <li class="c-menu">
+                                  <a href="#"><span>すべてのカテゴリ</span></a>
+                                </li>
+                                <li class="c-menu">
+                                  <a href="#"><span>コート</span>
+                                  </a>
+                                  <ul class="c-fold-child">
+                                    <li class="c-fold-list"><a href="#">すべてのコート</a></li>
+                                    <li class="c-fold-list"><a href="#">レインコート</a></li>
+                                    <li class="c-fold-list"><a href="#">ステンカラーコート</a></li>
+                                  </ul>
+                                </li>
+                                <li class="c-menu">
+                                  <a href="#"><span>ブルゾン</span></a>
+                                  <ul class="c-fold-child">
+                                    <li class="c-fold-list"><a href="#">すべてのブルゾン</a></li>
+                                    <li class="c-fold-list"><a href="#">ダウンブルゾン</a></li>
+                                    <li class="c-fold-list"><a href="#">ショートブルゾン</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
                             </div>
                           </div>
-                          <div class="c-category-region region">
-                            <input type="checkbox" id="c-drawer-category-select" class="c-drawer-select">
-                            <input type="checkbox" id="c-drawer-category-reset" class="c-drawer-reset">
-                            <label for="c-drawer-category-select">
-                              <span>カテゴリから探す</span>
-                            </label>
-                            <label for="c-drawer-category-reset">
-                              <span>閉じる</span>
-                            </label>
-                            <div class="c-util-nav">
-                              <div class="c-util-nav-inner">
-                                <p class="u-return">戻る</p>
-                                <p class="u-heading">カテゴリ</p>
-                                <ul class="c-fold">
-                                  <li class="c-l-o u-menu">
-                                    <a href="#"><span>すべてのカテゴリ</span></a>
-                                  </li>
-                                  <li class="c-l-1 u-menu">
-                                    <a href="#"><span>コート</span>
-                                    </a>
-                                    <ul class="c-l-1-c">
-                                      <li class="c-l-2"><a href="#">すべてのコート</a></li>
-                                      <li class="c-l-2"><a href="#">レインコート</a></li>
-                                      <li class="c-l-2"><a href="#">ステンカラーコート</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="c-l-1 u-menu">
-                                    <a href="#"><span>ブルゾン</span></a>
-                                    <ul class="c-l-1-c">
-                                      <li class="c-l-2"><a href="#">すべてのブルゾン</a></li>
-                                      <li class="c-l-2"><a href="#">ダウンブルゾン</a></li>
-                                      <li class="c-l-2"><a href="#">ショートブルゾン</a></li>
-                                    </ul>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="all-region region">
-                            <p class="u-menu">
-                              <a href="#"><span>すべてのアイテムから探す</span></a>
-                            </p>
-                          </div>
-                        </nav>
-                      </div>
+                        </div>
+                        <div class="c-all-region">
+                          <p class="c-menu">
+                            <a href="#"><span>すべてのアイテムから探す</span></a>
+                          </p>
+                        </div>
+                      </nav>
                     </div>
                   </div>
-              </div>
-              <div class="c-logo">
-                  <h1>
-                    <a href="#">
-                      <img src="img/logo.png" width="330" alt="UEMU STORE">
-                      <span class="heading-text">UEMU STORE</span>
-                    </a>
-                  </h1>
-              </div>
-              <div class="c-sns">
-                  <ul>
-                    <li><a href="#"><img src="img/twitter.png" width="100" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="img/github.png" width="100" alt="Github"></a></li>
-                    <li><a href="#"><img src="img/nu-blog.png" width="100" alt="Nu-blog"></a></li>
-                    <li><a href="#"><img src="img/nu-portfolio.png" width="100" alt="Nu-stack"></a></li>
+                </div>
+            </div>
+            <div class="c-logo">
+                <h1>
+                  <a href="#">
+                    <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/logo.png" width="330" alt="UEMU STORE">
+                    <span class="heading-text">UEMU STORE</span>
+                  </a>
+                </h1>
+            </div>
+            <div class="c-sns">
+                <ul>
+                  <li><a href="#"><img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/twitter.png" width="100" alt="Twitter"></a></li>
+                  <li><a href="#"><img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/github.png" width="100" alt="Github"></a></li>
+                  <li><a href="#"><img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/nu-blog.png" width="100" alt="Nu-blog"></a></li>
+                  <li><a href="#"><img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/nu-portfolio.png" width="100" alt="Nu-stack"></a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="c-header-lower">
+            <div class="l-container">
+              <div class="conduction hidden-md-down">
+                <div class="c-brand-region region">
+                  <h3 class="c-gnav-title">BRAND</h3>
+                  <ul class="c-genb u-box-shadow">
+                    <li>
+                      <div>
+                        <ul>
+                          <li class="c-fold-list"><a href="#">AAA</a></li>
+                          <li class="c-fold-list"><a href="#">BBB</a></li>
+                        </ul>
+                      </div>
+                    </li>
                   </ul>
+                </div>
+                <div class="c-category-region region">
+                  <h3 class="c-gnav-title">NEW</h3>
+                  <ul class="c-genc u-box-shadow">
+                    <li class="c-fold-list"><a href="#">2021/8/15(111)</a></li>
+                  </ul>
+                </div>
+                <div class="c-category-region region">
+                  <h3 class="c-gnav-title">CATEGORY</h3>
+                  <ul class="c-genc u-box-shadow">
+                    <li class="c-fold-list"><a href="#">すべてのカテゴリ</a></li>
+                    <li class="c-fold-list"><a href="#">コート</a></li>
+                    <li class="c-fold-list"><a href="#">バッグ・ポーチ</a></li>
+                    <li class="c-fold-list"><a href="#">シューズ</a></li>
+                  </ul>
+                </div>
+                <div class="c-category-region region">
+                  <h3 class="c-gnav-title">OUTLET</h3>
+                  <ul class="c-genc u-box-shadow">
+                    <li class="c-fold-list"><a href="#">すべてのカテゴリ</a></li>
+                    <li class="c-fold-list"><a href="#">コート</a></li>
+                    <li class="c-fold-list"><a href="#">バッグ・ポーチ</a></li>
+                    <li class="c-fold-list"><a href="#">シューズ</a></li>
+                  </ul>
+                </div>
+              </div> 
+              <div class="utility">
+                <div class="g-search-block">
+                  <form action="#" method="get">
+                    <input type="checkbox" id="keyword-checkbox">
+                    <label for="keyword-checkbox">
+                      <i class="fa-solid fa-search"></i>
+                      <span>検索</span>
+                    </label>
+                    <label for="keyword-checkbox-reset">
+                      <input id="keyword-checkbox-reset" type="reset" value="">
+                    </label>
+                    <div class="g-search-form">
+                      <p class="search__label-title">SEARCH</p>
+                      <div class="form-block">
+                        <input type="text" name="text" value="" placeholder="キーワードで探す" autocomplete="off">
+                        <input type="hidden" name="salegroup" value="normal">
+                        <input type="hidden" name="hid" value="search">
+                        <i class="fa-solid fa-search"></i>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="g-goto-logout">
+                  <div class="logout-block">
+                      <a href="#" title="ログイン">
+                        <form action="#" method="get">
+                          <input type="checkbox" id="login-checkbox">
+                          <label for="login-checkbox">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                            <span>ログイン</span>
+                          </label>
+                          <div class="g-login-form u-box-shadow">
+                            <div class="form-block">
+                              <input type="text" name="text" value="" placeholder="アカウント" autocomplete="off">
+                              <input type="password" name="password" value="" placeholder="パスワード" autocomplete="off">
+                              <button type="submit" class="btn btn-primary">ログインする</button>
+                            </div>
+                          </div>
+                        </form>
+                      </a>
+                  </div>
+                </div>
+                <div class="g-goto-mypage hidden-md-down">
+                  <div class="mypage-block">
+                    <a href="#" title="">
+                      <i class="fa-solid fa-user"></i>
+                      <span>新規会員登録</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="g-goto-cart">
+                  <form action="#" method="get">
+                    <input type="checkbox" id="cart-checkbox-2">
+                    <label for="cart-checkbox-2">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span>カート</span>
+                      <span></span>
+                    </label>
+                    <label for="cart-checkbox-2-reset">
+                    <input id="cart-checkbox-2-reset" type="reset" value="">
+                    </label>
+                    <div class="g-cart-form">
+                      <p class="cart__label-title">CART</p>
+                      <div class="form-block">
+                        <ul class="card-wrap">
+                          <li class="c-card-product">
+                            <div class="c-card-product-i">
+                              <div class="icons">
+                                <ul>
+                                  <li class="new"><span>NEW</span></li>
+                                </ul>
+                              </div>
+                              <div class="image">
+                                <a href="#">
+                                  <section class="carousel">
+                                    <ol class="carousel__viewport">
+                                      <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                          <span class="carousel__snapper"></span>
+                                      </li>
+                                      <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                          <span class="carousel__snapper"></span>
+                                      </li>
+                                    </ol>
+                                  </section>
+                                </a>
+                              </div>
+                              <div class="overview">
+                                <p class="brand">AAA</p>
+                                <p class="name"><a href="#">テスト</a></p>
+                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-            <div class="c-header-lower">
-              <div class="l-container">
-                <div class="conduction hidden-md-down">
-                  <div class="c-brand-region region">
-                    <h3 class="c-gnav-title">BRAND</h3>
-                    <ul class="c-genb u-hidden u-box-shadow">
-                      <li class="c-l-1 region">
-                        <div class="row">
-                          <ul class="c-l-1-c">
-                            <li class="c-l-2"><a href="#">AAA</a></li>
-                            <li class="c-l-2"><a href="#">BBB</a></li>
-                            <li class="c-l-2"><a href="#">CCC</a></li>
-                          </ul>
-                        </div>
+          </div>
+        </header>
+        <main id="page-body">
+          <div class="l-container">
+            <ol class="c-breadcrumb">
+              <li class="c-breadcrumb-item"><a href="#">UEMU STORE</a></li>
+              <li class="c-breadcrumb-item"><a href="">WOMEN</a></li>
+            </ol>
+          </div>
+          <article>
+            <div class="contents">
+              <div class="t-main">
+                <ul class="t-carousel_viewport">
+                  <li class="t-main_carousel_slider" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/main/main1.png')">
+                    <div class="t-main_carousel"></div>
+                  </li>
+                  <li class="t-main_carousel_slider" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/main/main2.png')">
+                    <div class="t-main_carousel"></div>
+                  </li>
+                  <li class="t-main_carousel_slider" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/main/main3.png')">
+                    <div class="t-main_carousel"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="t-thumb">
+                <ul class="t-thumb-list">
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_base.png')" title="BASE"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_css.png')" title="CSS"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_figma.png')" title="FIGMA"></a>
+                  </li>   
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_firebase.png')" title="FIREBASE"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_go.png')" title="GO"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_gulp.png')" title="Gulp"></a>
+                  </li>  
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_base.png')" title="BASE"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_css.png')" title="CSS"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_figma.png')" title="FIGMA"></a>
+                  </li>   
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_firebase.png')" title="FIREBASE"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_go.png')" title="GO"></a>
+                  </li>
+                  <li class="t-thumb_slider">
+                    <a class="t-thumb-link" href="#" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/thumb/skill_gulp.png')" title="Gulp"></a>
+                  </li> 
+                </ul>
+              </div>
+              <div class="l-content l-container">
+                <div class="l-main">
+                  <div class="t-ranking">
+                    <h2 class="c-title">RANKING</h2>
+                    <ul class="t-ranking-list">
+                      <li class="t-ranking-li">
+                        <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
+                          <figure>
+                            <span class="rank">1</span>
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/rank/rank1.png" alt="three.js earth and moon">
+                          </figure>
+                          <span>「block &amp; float」・「inline-block」・「flex」・「grid」の比較検証</span>
+                        </a>
+                      </li>
+                      <li class="t-ranking-li">
+                        <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
+                          <figure>
+                            <span class="rank">2</span>
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/rank/rank2.png" alt="ピクロス html/css">
+                          </figure>
+                          <span>ピクロス html/css</span>
+                        </a>
+                      </li>
+                      <li class="t-ranking-li">
+                        <a class="t-ranking-link" ref="#" target="_blank" rel="noreferrer noopener">
+                          <figure>
+                            <span class="rank">3</span>
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/rank/rank3.png" alt="Kirby html/css animation">
+                          </figure>
+                          <span>Kirby html/css animation</span>
+                        </a>
+                      </li>
+                      <li class="t-ranking-li">
+                        <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
+                          <figure>
+                            <span class="rank">4</span>
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/rank/rank4.png" alt="アジャイル開発とウォーターフォール開発に関しての個人の見解 その2">
+                          </figure>
+                          <span>three.js earth and moon</span>
+                        </a>
+                      </li>
+                      <li class="t-ranking-li">
+                        <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
+                          <figure>
+                            <span class="rank">5</span>
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/rank/rank5.png" alt="NOVATION  &amp; ADOBE を組み合わせてhtml/css アニメーションを作成してみた。">
+                          </figure>
+                          <span>アジャイル開発とウォーターフォール開発に関しての個人の見解 その2</span>
+                        </a>
+                      </li>
+                      <li class="t-ranking-li">
+                        <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
+                          <figure>
+                            <span class="rank">6</span>
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/rank/rank6.png" alt="golangでタイピングゲームを作ってみた 。その2">
+                          </figure>
+                          <span>golangでタイピングゲームを作ってみた 。その2</span>
+                        </a>
                       </li>
                     </ul>
                   </div>
-                  <div class="c-category-region region">
-                    <h3 class="c-gnav-title">NEW</h3>
-                    <ul class="c-genc u-hidden u-box-shadow">
-                      <li class="c-l-1 region">
-                        <div class="row">
-                          <ul class="c-l-1-c">
-                            <li class="c-l-2"><a href="#">2021/8/15(111)</a></li>
-                            <li class="c-l-2"><a href="#">2021/8/15(111)</a></li>
-                            <li class="c-l-2"><a href="#">2021/8/15(111)</a></li>
-                          </ul>
+                  <div class="c-search-content">
+                    <div class="c-pager pagerTopper">
+                      <div class="c-pager-inner">
+                        <div class="c-pager-number">
+                          対象商品<span>343</span>件
                         </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="c-category-region region">
-                    <h3 class="c-gnav-title">CATEGORY</h3>
-                    <ul class="c-genc u-hidden u-box-shadow">
-                      <li class="c-l-1 region">
-                        <div class="row">
-                          <ul class="c-l-1-c">
-                            <li class="c-l-2"><a href="#">すべてのカテゴリ</a></li>
-                            <li class="c-l-2"><a href="#">コート</a></li>
-                            <li class="c-l-2"><a href="#">ブルゾン</a></li>
-                            <li class="c-l-2"><a href="#">スーツ</a></li>
-                          </ul>
-                          <ul class="c-l-1-c">
-                            <li class="c-l-2"><a href="#">バッグ・ポーチ</a></li>
-                            <li class="c-l-2"><a href="#">ベルト</a></li>
-                            <li class="c-l-2"><a href="#">シューズ</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="c-category-region region">
-                    <h3 class="c-gnav-title">OUTLET</h3>
-                    <ul class="c-genc u-hidden u-box-shadow">
-                      <li class="c-l-1 region">
-                        <div class="row">
-                          <ul class="c-l-1-c">
-                            <li class="c-l-2"><a href="#">すべてのカテゴリ</a></li>
-                            <li class="c-l-2"><a href="#">コート</a></li>
-                            <li class="c-l-2"><a href="#">ブルゾン</a></li>
-                            <li class="c-l-2"><a href="#">スーツ</a></li>
-                          </ul>
-                          <ul class="c-l-1-c">
-                            <li class="c-l-2"><a href="#">バッグ・ポーチ</a></li>
-                            <li class="c-l-2"><a href="#">ベルト</a></li>
-                            <li class="c-l-2"><a href="#">シューズ</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div> 
-                <div class="utility">
-                  <div class="g-search-block">
-                    <form action="#" method="get">
-                      <input type="checkbox" id="keyword-checkbox">
-                      <label for="keyword-checkbox">
-                        <i class="fa-solid fa-search"></i>
-                        <span>検索</span>
-                      </label>
-                      <label for="keyword-checkbox-reset">
-                        <input id="keyword-checkbox-reset" type="reset" value="">
-                      </label>
-                      <div class="g-search-form">
-                        <p class="search__label-title">SEARCH</p>
-                        <div class="form-block">
-                          <input type="text" name="text" value="" placeholder="キーワードで探す" autocomplete="off">
-                          <input type="hidden" name="salegroup" value="normal">
-                          <input type="hidden" name="hid" value="search">
-                          <i class="fa-solid fa-search"></i>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="g-goto-logout">
-                    <div class="logout-block">
-                        <a href="#" title="ログイン">
+                        <div class="c-refine-search">
                           <form action="#" method="get">
-                            <input type="checkbox" id="login-checkbox">
-                            <label for="login-checkbox">
-                              <i class="fa-solid fa-right-to-bracket"></i>
-                              <span>ログイン</span>
+                            <input type="checkbox" id="c-filter-menu">
+                            <label for="c-filter-menu">
+                              <span>絞り込む</span>
                             </label>
-                            <div class="g-login-form u-box-shadow">
-                              <div class="form-block">
-                                <input type="text" name="text" value="" placeholder="アカウント" autocomplete="off">
-                                <input type="password" name="password" value="" placeholder="パスワード" autocomplete="off">
-                                <button type="submit" class="btn btn-primary">
-                                    ログインする
-                                </button>
-                              </div>
+                            <label for="c-filter-menu-reset">
+                              <input id="c-filter-menu-reset" type="reset" value="">
+                            </label>
+                            <div id="filter-menu" class="filter-menu">
+                                <div class="c-filter-inner d-stikey">
+                                  <div class="c-filter o-filter-region o-filter-search-i">
+                                      <div class="c-filter-keyword form-group">
+                                        <span class="title">キーワード</span>
+                                        <div class="cells">
+                                          <input type="text" name="text" value="" placeholder="キーワードで探す" autocomplete="off">
+                                          <input type="hidden" name="hid" value="search">
+                                        </div>
+                                      </div>
+                                      <div class="c-filter-brand form-group">
+                                        <span class="title">ブランド</span>
+                                        <div class="cells">
+                                          <input type="checkbox" id="c-modal-brand-select" class="c-modan-select">
+                                          <input type="checkbox" id="c-modal-brand-reset" class="c-modan-reset">
+                                          <label for="c-modal-brand-select">
+                                            <span>ブランドを選択する</span>
+                                          </label>
+                                          <label for="c-modal-brand-reset">
+                                            <span>閉じる</span>
+                                          </label>
+                                          <div class="c-util-nav o-filter-region">
+                                            <div class="c-util-nav-inner">
+                                              <p class="c-return">戻る</p>
+                                              <p class="c-heading">ブランド</p>
+                                              <ul class="c-fold">
+                                                <li>
+                                                  <label class="c-menu">
+                                                    <input type="checkbox" name="brand" value="AAA">
+                                                    <p class="input-siblings">AAA</p>
+                                                  </label>
+                                                </li>
+                                                <li>
+                                                  <label class="c-menu">
+                                                    <input type="checkbox" name="brand" value="BBB">
+                                                    <p class="input-siblings">BBB</p>
+                                                  </label>
+                                                </li>
+                                                <li>
+                                                  <label class="c-menu">
+                                                    <input type="checkbox" name="brand" value="CCC">
+                                                    <p class="input-siblings">CCC</p>
+                                                  </label>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="c-filter-category form-group">
+                                        <span class="title">カテゴリ</span>
+                                        <div class="cells">
+                                          <input type="checkbox" id="c-modal-category-select" class="c-modan-select">
+                                          <input type="checkbox" id="c-modal-category-reset" class="c-modan-reset">
+                                          <label for="c-modal-category-select"><span>カテゴリを選択する</span></label>
+                                          <label for="c-modal-category-reset"><span>閉じる</span></label>
+                                          <div class="c-util-nav o-filter-region">
+                                            <div class="c-util-nav-inner">
+                                              <p class="c-return">戻る</p>
+                                              <p class="c-heading">カテゴリ</p>
+                                              <ul class="c-fold">
+                                                <li class="c-l-1 c-slide-wrap">
+                                                  <input type="checkbox" id="c-cote">
+                                                  <label for="c-cote" class="c-menu heading checkbox">
+                                                    <span>コート</span>
+                                                  </label>
+                                                  <div class="c-slide-wrap-inner">
+                                                    <ul class="c-fold">
+                                                      <li class="c-fold-list">
+                                                        <label class="c-menu">
+                                                          <input type="checkbox" name="category" value="category-all-cote">
+                                                          <p class="input-siblings"><span class="yield">すべてのコート</span></p>
+                                                        </label>
+                                                      </li>
+                                                      <li class="c-fold-list">
+                                                        <label class="c-menu">
+                                                          <input type="checkbox" name="category" value="category-rain-cote">
+                                                          <p class="input-siblings"><span class="yield">レインコート</span></p>
+                                                        </label>
+                                                      </li>
+                                                      <li class="c-fold-list">
+                                                        <label class="c-menu">
+                                                          <input type="checkbox" name="category" value="category-stencollor-cote">
+                                                          <p class="input-siblings"><span class="yield">ステンカラーコート</span></p>
+                                                        </label>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </li>
+                                                <li class="c-l-1 c-slide-wrap">
+                                                  <input type="checkbox" id="c-buruzon">
+                                                    <label for="c-buruzon" class="c-menu heading checkbox">
+                                                    <span>ブルゾン</span>
+                                                  </label>
+                                                  <div class="c-slide-wrap-inner">
+                                                    <ul class="c-fold">
+                                                        <li class="c-fold-list">
+                                                          <label class="c-menu">
+                                                            <input type="checkbox" name="category" value="catgory-all-bruzon">
+                                                            <p class="input-siblings"><span class="yield">すべてのブルゾン</span></p>
+                                                          </label>
+                                                        </li>
+                                                        <li class="c-fold-list">
+                                                          <label class="c-menu">
+                                                            <input type="checkbox" name="category" value="catgory-down-bruzon">
+                                                            <p class="input-siblings"><span class="yield">ダウンブルゾン</span></p>
+                                                          </label>
+                                                        </li>
+                                                        <li class="c-fold-list">
+                                                          <label class="c-menu">
+                                                            <input type="checkbox" name="category" value="catgory-short-bruzon">
+                                                            <p class="input-siblings"><span class="yield">ショートブルゾン</span></p>
+                                                          </label>
+                                                        </li>
+                                                    </ul>
+                                                  </div>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="c-filter-price form-group">
+                                        <span class="title">価格</span>
+                                        <div class="cells">
+                                          <input type="checkbox" id="c-modal-price-select" class="c-modan-select">
+                                          <input type="checkbox" id="c-modal-price-reset" class="c-modan-reset">
+                                          <label for="c-modal-price-select">
+                                            <span>価格を選択する</span>
+                                          </label>
+                                          <label for="c-modal-price-reset">
+                                            <span>閉じる</span>
+                                          </label>
+                                          <div class="c-util-nav o-filter-region">
+                                            <div class="c-util-nav-inner">
+                                              <p class="c-return">戻る</p>
+                                              <p class="c-heading">価格</p>
+                                              <ul class="c-fold">
+                                                <li>
+                                                  <label class="c-menu">
+                                                    <input type="checkbox" name="price" value="-10000">
+                                                    <p class="input-siblings"><span class="yield">￥10,000未満</span></p>
+                                                  </label>
+                                                </li>
+                                                <li>
+                                                  <label class="c-menu">
+                                                    <input type="checkbox" name="price" value="10000-30000">
+                                                    <p class="input-siblings"><span class="yield">￥10,000～￥30,000</span></p>
+                                                  </label>
+                                                </li>
+                                                <li>
+                                                  <label class="c-menu">
+                                                    <input type="checkbox" name="price" value="30000-">
+                                                    <p class="input-siblings"><span class="yield">￥30,000以上</span></p>
+                                                  </label>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="c-filter-saletype form-group">
+                                        <span class="title">販売条件</span>
+                                        <div class="cells">
+                                          <div class="c-filter-select">
+                                            <div class="c-filter-select-i">
+                                              <select name="saletype" class="f-layout">
+                                                <option value="all" selected="">allitem</option>
+                                                <option value="normal">proper</option>
+                                                <option value="SaleOff">saleoff</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="c-filter-stock form-group">
+                                        <span class="title">在庫状況</span>
+                                        <div class="cells">
+                                          <div class="c-filter-select">
+                                            <div class="c-filter-select-i">
+                                              <select name="saletype" class="f-layout">
+                                                <option value="instock" selected="">instock</option>
+                                                <option value="all">all stock</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="c-filter-sort form-group">
+                                        <span class="title">並び替え</span>
+                                        <div class="cells">
+                                          <div class="c-filter-select">
+                                            <div class="c-filter-select-i">
+                                              <select name="sort" class="f-layout">
+                                                <option value="newest" selected="">new est</option>
+                                                <option value="price-asc">price ask</option>
+                                                <option value="price-desc">price desc</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="c-filter-submit o-filter-search-group">
+                                        <div class="form-group">
+                                          <div class="reset">
+                                            <input class="btn btn-secondary" type="reset" value="リセット">
+                                          </div>
+                                          <div class="submit">
+                                            <input class="btn btn-primary" type="submit" value="この条件で絞り込む">
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
                             </div>
                           </form>
-                        </a>
-                    </div>
-                  </div>
-                  <div class="g-goto-mypage hidden-md-down">
-                    <div class="mypage-block">
-                      <a href="#" title="">
-                        <i class="fa-solid fa-user"></i>
-                        <span>新規会員登録</span>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="g-goto-cart">
-                    <form action="#" method="get">
-                      <input type="checkbox" id="cart-checkbox-2">
-                      <label for="cart-checkbox-2">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span>カート</span>
-                        <span></span>
-                      </label>
-                      <label for="cart-checkbox-2-reset">
-                      <input id="cart-checkbox-2-reset" type="reset" value="">
-                      </label>
-                      <div class="g-cart-form">
-                        <p class="cart__label-title">CART</p>
-                        <div class="form-block">
-                          <ul class="card-wrap">
-                            <li class="card-product">
-                              <div class="card-product-i">
-                                <div class="icons">
-                                  <ul>
-                                    <li class="new"><span>NEW</span></li>
-                                  </ul>
-                                </div>
-                                <div class="image">
-                                  <a href="#">
-                                    <section class="carousel">
-                                      <ol class="carousel__viewport">
-                                        <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                            <span class="carousel__snapper"></span>
-                                        </li>
-                                        <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                            <span class="carousel__snapper"></span>
-                                        </li>
-                                        <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                            <span class="carousel__snapper"></span>
-                                        </li>
-                                        <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                            <span class="carousel__snapper"></span>
-                                        </li>
-                                      </ol>
-                                    </section>
-                                  </a>
-                                </div>
-                                <div class="overview">
-                                  <p class="brand">AAA</p>
-                                  <p class="name"><a href="#">テスト</a></p>
-                                  <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
                         </div>
                       </div>
-                    </form>
+                      <div class="c-pager-inner hidden-md-down">
+                        <ul class="c-pagination">
+                          <li class="c-page-item c-page-prev">
+                            <a class="c-page-link" href="#" rel="prev"><i class="fa-solid fa-chevron-left"></i></a>
+                          </li>
+                          <li class="c-page-item">
+                            <a class="c-page-link" href="#">1</a>
+                          </li>
+                          <li class="c-page-item">
+                            <span class="c-page-link" href="#">…</span>
+                          </li>
+                          <li class="c-page-item">
+                            <a class="c-page-link" href="#">9</a>
+                          </li>
+                          <li class="c-page-item">
+                            <a class="c-page-link active" href="#">10</a>
+                          </li>
+                          <li class="c-page-item">
+                            <a class="c-page-link" href="#">11</a>
+                          </li>
+                          <li class="c-page-item">
+                            <span class="c-page-link" href="#">…</span>
+                          </li>
+                          <li class="c-page-item">
+                            <a class="c-page-link" href="#">99</a>
+                          </li>
+                          <li class="c-page-item c-page-next">
+                            <a class="c-page-link" href="#" rel="next"><i class="fa-solid fa-chevron-right"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c-sort">
+                      <div class="c-sort-radio hidden-md-down">
+                        <form method="get" action="#">
+                          <label>
+                            <input type="radio" name="saletype" onchange="this.form.submit();" value="all" checked="">allitem
+                          </label>
+                          <label>
+                            <input type="radio" name="saletype" onchange="this.form.submit();" value="normal">proper
+                          </label>
+                          <label>
+                            <input type="radio" name="saletype" onchange="this.form.submit();" value="SaleOff">saleoff
+                          </label>
+                        </form>
+                      </div>
+                      <div class="c-sort-pulldown">
+                        <div class="c-sort-select">
+                          <form method="get" action="#">
+                            <select id="sort" name="sort" onchange="this.form.submit();" class="f-layout">
+                              <option value="newest">newest</option>
+                              <option value="price-asc">price asc</option>
+                              <option value="price-desc">price desc</option>
+                            </select>
+                          </form>
+                        </div>
+                        <div class="c-sort-select hidden-lg-up">
+                          <form method="get" action="#">
+                            <select id="SaleType" name="saletype" onchange="this.form.submit();" class="f-layout">
+                              <option value="all">allitem</option>
+                              <option value="normal">proper</option>
+                              <option value="SaleOff">saleoff</option>
+                            </select>
+                          </form>
+                        </div>
+                        <div class="c-sort-select hidden-md-down">
+                          <form method="get" action="#">
+                            <select id="tockLevelStatus" name="stock" onchange="this.form.submit();" class="f-layout">
+                              <option value="all">allstock</option>
+                              <option value="instock">instock</option>
+                            </select>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <input type="radio" id="switch-type1" name="switch" class="c-switch-input1 hidden-md-up">
+                  <label class="c-switch type1 hidden-md-up" for="switch-type1"></label>
+                  <input type="radio" id="switch-type2" name="switch" class="c-switch-input2 hidden-md-up" checked="">
+                  <label class="c-switch type2 hidden-md-up" for="switch-type2"></label>
+                  <input type="radio" id="switch-type3" name="switch" class="c-switch-input3 hidden-md-up">
+                  <label class="c-switch type3 hidden-md-up" for="switch-type3"></label>
+                  <div class="widget-search">
+                    <div class="widget-items products">
+                      <ul class="card-wrap column-4">
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="c-card-product">
+                          <div class="c-card-product-i">
+                            <div class="icons">
+                              <ul>
+                                <li class="new"><span>NEW</span></li>
+                              </ul>
+                            </div>
+                            <div class="image">
+                              <a href="#">
+                                <section class="carousel">
+                                  <ol class="carousel__viewport">
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                    <li class="carousel__slide" style="background-image:url('https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg')">
+                                        <span class="carousel__snapper"></span>
+                                    </li>
+                                  </ol>
+                                </section>
+                              </a>
+                              <div class="favorite">
+                                <form class="add_to_favorite_for_search_form" action="#" method="post">
+                                    <button type="submit" class="c-favorite-btn">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="cartbtn">
+                              <form class="add_to_cart" action="#" method="post">
+                                  <select name="addtocart_select" class="f-layout">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                  </select>
+                                  <button type="submit" class="c-addcart-btn btn btn-primary">
+                                      Add to Cart
+                                  </button>
+                              </form>
+                            </div>
+                            <div class="thumbs">
+                              <ul>
+                                <li>
+                                  <a href="#">
+                                    <picture>
+                                      <source media="(max-width:991px)" loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg">
+                                      <img src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/item-thumbs-01.jpg" loading="lazy" alt="">
+                                    </picture>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="overview">
+                              <p class="brand">AAA</p>
+                              <p class="name"><a href="#">テスト</a></p>
+                              <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div> 
                 </div>
-              </div>
-            </div>
-          </header>
-          <main id="page-body">
-            <div class="l-container">
-              <ol class="c-breadcrumb">
-                <li class="c-breadcrumb-item"><a href="#">UEMU STORE</a></li>
-                <li class="c-breadcrumb-item"><a href="">WOMEN</a></li>
-              </ol>
-            </div>
-            <article>
-              <div class="contents">
-                <div class="t-main">
-                  <ul class="t-carousel_viewport">
-                    <li class="t-main_carousel_slider" style="background-image:url('img/main/main1.png')">
-                      <div class="t-main_carousel"></div>
-                    </li>
-                    <li class="t-main_carousel_slider" style="background-image:url('img/main/main2.png')">
-                      <div class="t-main_carousel"></div>
-                    </li>
-                    <li class="t-main_carousel_slider" style="background-image:url('img/main/main3.png')">
-                      <div class="t-main_carousel"></div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="t-thumb">
-                  <ul class="t-thumb-list">
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_base.png')" title="BASE"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_css.png')" title="CSS"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_figma.png')" title="FIGMA"></a>
-                    </li>   
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_firebase.png')" title="FIREBASE"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_go.png')" title="GO"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_gulp.png')" title="Gulp"></a>
-                    </li>  
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_base.png')" title="BASE"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_css.png')" title="CSS"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_figma.png')" title="FIGMA"></a>
-                    </li>   
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_firebase.png')" title="FIREBASE"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_go.png')" title="GO"></a>
-                    </li>
-                    <li class="t-thumb_slider">
-                      <a class="t-thumb-link" href="#" style="background-image:url('img/thumb/skill_gulp.png')" title="Gulp"></a>
-                    </li> 
-                  </ul>
-                </div>
-                <div class="l-content l-container">
-                  <div class="l-main">
-                    <div class="t-ranking">
-                      <h2 class="c-title">RANKING</h2>
-                      <ul class="t-ranking-list">
-                        <li class="t-ranking-li">
-                          <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
-                            <figure>
-                              <span class="rank">1</span>
-                              <img loading="lazy" src="img/rank/rank1.png" alt="three.js earth and moon">
-                            </figure>
-                            <span>「block &amp; float」・「inline-block」・「flex」・「grid」の比較検証</span>
+                <div class="l-side">
+                  <div class="l-sidebar-wrap">
+                    <h2 class="c-title">CONTENTS</h2>
+                    <div class="c-sidebanner">
+                      <ul>
+                        <li>
+                          <a href="#" target="_blank" rel="noreferrer noopener">
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/side/side1.png">
                           </a>
                         </li>
-                        <li class="t-ranking-li">
-                          <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
-                            <figure>
-                              <span class="rank">2</span>
-                              <img loading="lazy" src="img/rank/rank2.png" alt="ピクロス html/css">
-                            </figure>
-                            <span>ピクロス html/css</span>
-                          </a>
-                        </li>
-                        <li class="t-ranking-li">
-                          <a class="t-ranking-link" ref="#" target="_blank" rel="noreferrer noopener">
-                            <figure>
-                              <span class="rank">3</span>
-                              <img loading="lazy" src="img/rank/rank3.png" alt="Kirby html/css animation">
-                            </figure>
-                            <span>Kirby html/css animation</span>
-                          </a>
-                        </li>
-                        <li class="t-ranking-li">
-                          <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
-                            <figure>
-                              <span class="rank">4</span>
-                              <img loading="lazy" src="img/rank/rank4.png" alt="アジャイル開発とウォーターフォール開発に関しての個人の見解 その2">
-                            </figure>
-                            <span>three.js earth and moon</span>
-                          </a>
-                        </li>
-                        <li class="t-ranking-li">
-                          <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
-                            <figure>
-                              <span class="rank">5</span>
-                              <img loading="lazy" src="img/rank/rank5.png" alt="NOVATION  &amp; ADOBE を組み合わせてhtml/css アニメーションを作成してみた。">
-                            </figure>
-                            <span>アジャイル開発とウォーターフォール開発に関しての個人の見解 その2</span>
-                          </a>
-                        </li>
-                        <li class="t-ranking-li">
-                          <a class="t-ranking-link" href="#" target="_blank" rel="noreferrer noopener">
-                            <figure>
-                              <span class="rank">6</span>
-                              <img loading="lazy" src="img/rank/rank6.png" alt="golangでタイピングゲームを作ってみた 。その2">
-                            </figure>
-                            <span>golangでタイピングゲームを作ってみた 。その2</span>
+                        <li>
+                          <a href="#" target="_blank" rel="noreferrer noopener">
+                            <img loading="lazy" src="https://raw.githubusercontent.com/uemura5683/ec-modan-layout/main/img/side/side2.png">
                           </a>
                         </li>
                       </ul>
                     </div>
-                    <div class="c-search-content">
-                      <div class="c-pager pagerTopper">
-                        <div class="c-pager-inner">
-                          <div class="c-pager-number">
-                            対象商品<span>343</span>件
-                          </div>
-                          <div class="c-refine-search">
-                            <form action="#" method="get">
-                              <input type="checkbox" id="c-filter-menu">
-                              <label for="c-filter-menu">
-                                <span>絞り込む</span>
-                              </label>
-                              <label for="c-filter-menu-reset">
-                                <input id="c-filter-menu-reset" type="reset" value="">
-                              </label>
-                              <div id="filter-menu" class="filter-menu">
-                                  <div class="c-filter-inner d-stikey">
-                                    <div class="c-filter o-filter-region o-filter-search-i">
-                                        <div class="c-filter-keyword form-group">
-                                          <span class="title">キーワード</span>
-                                          <div class="cells">
-                                            <input type="text" name="text" value="" placeholder="キーワードで探す" autocomplete="off">
-                                            <input type="hidden" name="hid" value="search">
-                                          </div>
-                                        </div>
-                                        <div class="c-filter-brand form-group">
-                                          <span class="title">ブランド</span>
-                                          <div class="cells">
-                                            <input type="checkbox" id="c-modal-brand-select" class="c-modan-select">
-                                            <input type="checkbox" id="c-modal-brand-reset"  class="c-modan-reset">
-                                            <label for="c-modal-brand-select">
-                                              <span>ブランドを選択する</span>
-                                            </label>
-                                            <label for="c-modal-brand-reset">
-                                              <span>閉じる</span>
-                                            </label>
-                                            <div class="c-util-nav o-filter-region">
-                                              <div class="c-util-nav-inner">
-                                                <p class="u-return">戻る</p>
-                                                <p class="u-heading">ブランド</p>
-                                                <ul class="c-fold">
-                                                  <li class="c-l-1">
-                                                    <label class="u-menu">
-                                                      <input type="checkbox" name="brand" value="AAA">
-                                                      <p class="input-siblings">AAA</p>
-                                                    </label>
-                                                  </li>
-                                                  <li class="c-l-1">
-                                                    <label class="u-menu">
-                                                      <input type="checkbox" name="brand" value="BBB">
-                                                      <p class="input-siblings">BBB</p>
-                                                    </label>
-                                                  </li>
-                                                  <li class="c-l-1">
-                                                    <label class="u-menu">
-                                                      <input type="checkbox" name="brand" value="CCC">
-                                                      <p class="input-siblings">CCC</p>
-                                                    </label>
-                                                  </li>
-                                                </ul>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="c-filter-category form-group">
-                                          <span class="title">カテゴリ</span>
-                                          <div class="cells">
-                                            <input type="checkbox" id="c-modal-category-select" class="c-modan-select">
-                                            <input type="checkbox" id="c-modal-category-reset"  class="c-modan-reset">
-                                            <label for="c-modal-category-select">
-                                              <span>カテゴリを選択する</span>
-                                            </label>
-                                            <label for="c-modal-category-reset">
-                                              <span>閉じる</span>
-                                            </label>
-                                            <div class="c-util-nav o-filter-region">
-                                              <div class="c-util-nav-inner">
-                                                <p class="u-return">戻る</p>
-                                                <p class="u-heading">カテゴリ</p>
-                                                <ul class="c-fold">
-                                                  <li class="c-l-1 c-slide-wrap">
-                                                    <input type="checkbox" id="c-cote">
-                                                    <label for="c-cote" class="u-menu heading checkbox">
-                                                      <span>コート</span>
-                                                    </label>
-                                                    <div class="c-slide-wrap-inner">
-                                                      <ul class="c-fold">
-                                                        <li class="c-l-2">
-                                                          <label class="u-menu">
-                                                            <input type="checkbox" name="category" value="category-all-cote">
-                                                            <p class="input-siblings"><span class="yield">すべてのコート</span></p>
-                                                          </label>
-                                                        </li>
-                                                        <li class="c-l-2">
-                                                          <label class="u-menu">
-                                                            <input type="checkbox" name="category" value="category-rain-cote">
-                                                            <p class="input-siblings"><span class="yield">レインコート</span></p>
-                                                          </label>
-                                                        </li>
-                                                        <li class="c-l-2">
-                                                          <label class="u-menu">
-                                                            <input type="checkbox" name="category" value="category-stencollor-cote">
-                                                            <p class="input-siblings"><span class="yield">ステンカラーコート</span></p>
-                                                          </label>
-                                                        </li>
-                                                      </ul>
-                                                    </div>
-                                                  </li>
-                                                  <li class="c-l-1 c-slide-wrap">
-                                                    <input type="checkbox" id="c-buruzon">
-                                                      <label for="c-buruzon" class="u-menu heading checkbox">
-                                                      <span>ブルゾン</span>
-                                                    </label>
-                                                    <div class="c-slide-wrap-inner">
-                                                      <ul class="c-fold">
-                                                          <li class="c-l-2">
-                                                            <label class="u-menu">
-                                                              <input type="checkbox" name="category" value="catgory-all-bruzon">
-                                                              <p class="input-siblings"><span class="yield">すべてのブルゾン</span></p>
-                                                            </label>
-                                                          </li>
-                                                          <li class="c-l-2">
-                                                            <label class="u-menu">
-                                                              <input type="checkbox" name="category" value="catgory-down-bruzon">
-                                                              <p class="input-siblings"><span class="yield">ダウンブルゾン</span></p>
-                                                            </label>
-                                                          </li>
-                                                          <li class="c-l-2">
-                                                            <label class="u-menu">
-                                                              <input type="checkbox" name="category" value="catgory-short-bruzon">
-                                                              <p class="input-siblings"><span class="yield">ショートブルゾン</span></p>
-                                                            </label>
-                                                          </li>
-                                                      </ul>
-                                                    </div>
-                                                  </li>
-                                                </ul>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="c-filter-price form-group">
-                                          <span class="title">価格</span>
-                                          <div class="cells">
-                                            <input type="checkbox" id="c-modal-price-select" class="c-modan-select">
-                                            <input type="checkbox" id="c-modal-price-reset"  class="c-modan-reset">
-                                            <label for="c-modal-price-select">
-                                              <span>価格を選択する</span>
-                                            </label>
-                                            <label for="c-modal-price-reset">
-                                              <span>閉じる</span>
-                                            </label>
-                                            <div class="c-util-nav o-filter-region">
-                                              <div class="c-util-nav-inner">
-                                                <p class="u-return">戻る</p>
-                                                <p class="u-heading">価格</p>
-                                                <ul class="c-fold">
-                                                  <li class="c-l-1">
-                                                    <label class="u-menu">
-                                                      <input type="checkbox" name="price" value="-10000">
-                                                      <p class="input-siblings"><span class="yield">￥10,000未満</span></p>
-                                                    </label>
-                                                  </li>
-                                                  <li class="c-l-1">
-                                                    <label class="u-menu">
-                                                      <input type="checkbox" name="price" value="10000-30000">
-                                                      <p class="input-siblings"><span class="yield">￥10,000～￥30,000</span></p>
-                                                    </label>
-                                                  </li>
-                                                  <li class="c-l-1">
-                                                    <label class="u-menu">
-                                                      <input type="checkbox" name="price" value="30000-">
-                                                      <p class="input-siblings"><span class="yield">￥30,000以上</span></p>
-                                                    </label>
-                                                  </li>
-                                                </ul>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="c-filter-saletype form-group">
-                                          <span class="title">販売条件</span>
-                                          <div class="cells">
-                                            <div class="c-filter-select">
-                                              <div class="c-filter-select-i">
-                                                <select name="saletype" class="f-layout">
-                                                  <option value="all" selected="">allitem</option>
-                                                  <option value="normal">proper</option>
-                                                  <option value="SaleOff">saleoff</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="c-filter-stock form-group">
-                                          <span class="title">在庫状況</span>
-                                          <div class="cells">
-                                            <div class="c-filter-select">
-                                              <div class="c-filter-select-i">
-                                                <select name="saletype" class="f-layout">
-                                                  <option value="instock" selected="">instock</option>
-                                                  <option value="all">all stock</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="c-filter-sort form-group">
-                                          <span class="title">並び替え</span>
-                                          <div class="cells">
-                                            <div class="c-filter-select">
-                                              <div class="c-filter-select-i">
-                                                <select name="sort" class="f-layout">
-                                                  <option value="newest" selected="">new est</option>
-                                                  <option value="price-asc">price ask</option>
-                                                  <option value="price-desc">price desc</option>
-                                                </select>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="c-filter-submit o-filter-search-group">
-                                          <div class="form-group">
-                                            <div class="reset">
-                                              <input class="btn btn-secondary" type="reset" value="リセット">
-                                            </div>
-                                            <div class="submit">
-                                              <input class="btn btn-primary" type="submit" value="この条件で絞り込む">
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                        <div class="c-pager-inner hidden-md-down">
-                          <ul class="c-pagination">
-                            <li class="c-page-item c-page-prev">
-                              <a class="c-page-link" href="#" rel="prev">
-                                <i class="fa-solid fa-chevron-left"></i>
-                              </a>
-                            </li>
-                            <li class="c-page-item">
-                              <a class="c-page-link" href="#">1</a>
-                            </li>
-                            <li class="c-page-item">
-                              <span class="c-page-link" href="#">…</span>
-                            </li>
-                            <li class="c-page-item">
-                              <a class="c-page-link" href="#">9</a>
-                            </li>
-                            <li class="c-page-item">
-                              <a class="c-page-link active" href="#">10</a>
-                            </li>
-                            <li class="c-page-item">
-                              <a class="c-page-link" href="#">11</a>
-                            </li>
-                            <li class="c-page-item">
-                              <span class="c-page-link" href="#">…</span>
-                            </li>
-                            <li class="c-page-item">
-                              <a class="c-page-link" href="#">99</a>
-                            </li>
-                            <li class="c-page-item c-page-next">
-                              <a class="c-page-link" href="#" rel="next">
-                                <i class="fa-solid fa-chevron-right"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="c-sort">
-                        <div class="c-sort-radio hidden-md-down">
-                          <form method="get" action="#">
-                            <label>
-                              <input type="radio" name="saletype" onchange="this.form.submit();" value="all" checked="">allitem
-                            </label>
-                            <label>
-                              <input type="radio" name="saletype" onchange="this.form.submit();" value="normal">proper
-                            </label>
-                            <label>
-                              <input type="radio" name="saletype" onchange="this.form.submit();" value="SaleOff">saleoff
-                            </label>
-                          </form>
-                        </div>
-                        <div class="c-sort-pulldown">
-                          <div class="c-sort-select">
-                            <form method="get" action="#">
-                              <select id="sort" name="sort" onchange="this.form.submit();" class="f-layout">
-                                <option value="newest">newest</option>
-                                <option value="price-asc">price asc</option>
-                                <option value="price-desc">price desc</option>
-                              </select>
-                            </form>
-                          </div>
-                          <div class="c-sort-select hidden-lg-up">
-                            <form method="get" action="#">
-                              <select id="SaleType" name="saletype" onchange="this.form.submit();" class="f-layout">
-                                <option value="all">allitem</option>
-                                <option value="normal">proper</option>
-                                <option value="SaleOff">saleoff</option>
-                              </select>
-                            </form>
-                          </div>
-                          <div class="c-sort-select hidden-md-down">
-                            <form method="get" action="#">
-                              <select id="tockLevelStatus" name="stock" onchange="this.form.submit();" class="f-layout">
-                                <option value="all">allstock</option>
-                                <option value="instock">instock</option>
-                              </select>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <input type="radio" id="switch-type1" name="switch" class="c-switch-input1 hidden-md-up">
-                    <label class="c-switch type1 hidden-md-up" for="switch-type1"></label>
-                    <input type="radio" id="switch-type2" name="switch" class="c-switch-input2 hidden-md-up" checked>
-                    <label class="c-switch type2 hidden-md-up" for="switch-type2"></label>
-                    <input type="radio" id="switch-type3" name="switch" class="c-switch-input3 hidden-md-up">
-                    <label class="c-switch type3 hidden-md-up" for="switch-type3"></label>
-                    <div class="widget-search">
-                      <div class="widget-items products">
-                        <ul class="card-wrap column-4">
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card-product">
-                            <div class="card-product-i">
-                              <div class="icons">
-                                <ul>
-                                  <li class="new"><span>NEW</span></li>
-                                </ul>
-                              </div>
-                              <div class="image">
-                                <a href="#">
-                                  <section class="carousel">
-                                    <ol class="carousel__viewport">
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                      <li class="carousel__slide" style="background-image:url('img/item-thumbs-01.jpg')">
-                                          <span class="carousel__snapper"></span>
-                                      </li>
-                                    </ol>
-                                  </section>
-                                </a>
-                                <div class="favorite">
-                                  <form class="add_to_favorite_for_search_form" action="#" method="post">
-                                      <button type="submit" class="c-favorite-btn">
-                                          <i class="fa-solid fa-heart"></i>
-                                      </button>
-                                  </form>
-                                </div>
-                              </div>
-                              <div class="cartbtn">
-                                <form class="add_to_cart" action="#" method="post">
-                                    <select name="addtocart_select" class="f-layout">
-                                      <option value="0">0</option>
-                                      <option value="1">1</option>
-                                    </select>
-                                    <button type="submit" class="c-addcart-btn btn btn-primary">
-                                        Add to Cart
-                                    </button>
-                                </form>
-                              </div>
-                              <div class="thumbs">
-                                <ul>
-                                  <li>
-                                    <a href="#">
-                                      <picture>
-                                        <source media="(max-width:991px)" loading="lazy" src="img/item-thumbs-01.jpg">
-                                        <img src="img/item-thumbs-01.jpg" loading="lazy" alt="">
-                                      </picture>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="overview">
-                                <p class="brand">AAA</p>
-                                <p class="name"><a href="#">テスト</a></p>
-                                <p class="price"><b>￥9,980</b><span class="unit">税込</span></p>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div> 
-                  </div>
-                  <div class="l-side">
-                    <div class="l-sidebar-wrap">
-                      <h2 class="c-title">CONTENTS</h2>
-                      <div class="c-sidebanner">
-                        <ul>
-                          <li>
-                            <a href="#" target="_blank" rel="noreferrer noopener">
-                              <img loading="lazy" src="img/side/side1.png">
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" target="_blank" rel="noreferrer noopener">
-                              <img loading="lazy" src="img/side/side2.png">
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </main>
-          <footer id="l-page-footer">
-            <div class="c-pagetop"><a href="#wrapper">ページトップへ</a></div>
-            <div class="l-footer-upper">
-              <div class="l-container">
-                <div class="c-conduction row">
-                  <div class="c-footer-sitemap">
-                    <ul class="u-adjuster">
-                      <li><a href="#" target="_blank">サイトポリシー</a></li>
-                      <li><a href="#">特定商取引法について</a></li>
-                      <li><a href="#" target="_blank">プライバシーポリシー</a></li>
-                      <li><a href="#">サイトマップ</a></li>
-                      <li><a href="#" target="_blank">会社概要</a></li>
-                    </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="l-footer-lower">
-              <div class="copyright">
-                <p>Copyrights © Uemu Store LTD. all rights Reserved</p>
+          </article>
+        </main>
+        <footer id="l-page-footer">
+          <div class="c-pagetop"><a href="#wrapper">ページトップへ</a></div>
+          <div class="l-footer-upper">
+            <div class="l-container">
+              <div class="c-conduction row">
+                <div class="c-footer-sitemap">
+                  <ul class="c-footer-sitemap-list">
+                    <li class="c-footer-sitemap-list-li"><a class="c-footer-sitemap-list-link c-arrow" href="#">サイトポリシー</a></li>
+                    <li class="c-footer-sitemap-list-li"><a class="c-footer-sitemap-list-link c-arrow" href="#">特定商取引法について</a></li>
+                    <li class="c-footer-sitemap-list-li"><a class="c-footer-sitemap-list-link c-arrow" href="#">プライバシーポリシー</a></li>
+                    <li class="c-footer-sitemap-list-li"><a class="c-footer-sitemap-list-link c-arrow" href="#">サイトマップ</a></li>
+                    <li class="c-footer-sitemap-list-li"><a class="c-footer-sitemap-list-link c-arrow" href="#">会社概要</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </footer>
-        </div>
+          </div>
+          <div class="l-footer-lower">
+            <div class="copyright">
+              <p>Copyrights © Uemu Store LTD. all rights Reserved</p>
+            </div>
+          </div>
+        </footer>
       </div>
+    </div>
   </body>
 </html>
