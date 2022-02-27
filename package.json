@@ -1,0 +1,26 @@
+{
+  "name": "ec-modan-layout",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files='*.html, css/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uemura5683/ec-modan-layout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uemura5683/ec-modan-layout/issues"
+  },
+  "homepage": "https://github.com/uemura5683/ec-modan-layout#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "install": "^0.13.0",
+    "stylelint-config-recommended": "^7.0.0"
+  },
+  "description": ""
+}
