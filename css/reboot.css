@@ -2850,7 +2850,7 @@ label[for*="c-modal-brand-reset"], label[for*="c-modal-category-reset"], label[f
 **/
 .t-main {
     overflow: hidden;
-    aspect-ratio: 4.1 / 1.5;
+    aspect-ratio: 2 / 1;
     width: 100%;
     position: relative;
     margin: 0 0 20px;
@@ -2901,9 +2901,9 @@ label[for*="c-modal-brand-reset"], label[for*="c-modal-category-reset"], label[f
     animation-name: none;
   }
 }
-@supports not (aspect-ratio: 4.1 / 1.5) {
+@supports not (aspect-ratio: 2 / 1) {
   .t-main {
-    padding: 37% 0 0;
+    padding: 50% 0 0;
   }
 }
 .t-main ul li:hover .t-main_carousel,
